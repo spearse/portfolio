@@ -1,0 +1,79 @@
+name: Sync Approved Summaries
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * 1"   # Every Monday 09:00 UTC (optional)
+
+permissions:
+  contents: write   # allow committing to the public repo
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout public repo
+        uses: actions/checkout@v4
+
+      - name: Checkout private repo (read-only)
+        uses: actions/checkout@v4
+        with:
+          repository: spearse/projectSummaries   # e.g. projectsummaries
+          token: ${{ secrets.PRIVATE_REPO_PAT }}
+          path: private_src
+          ref: main   # or the default branch of your private repo
+
+      # OPTIONAL: keep a clean site structure
+      - name: Prepare folders
+        run: |
+          mkdir -p projects
+          rm -rf projects/*
+
+      # COPY ONLY WHITELISTED FILES (edit source paths to match your private repo)
+      - name: Copy approved project summaries
+        run: |
+          cp "private_src/projectSummaries/approved/Ableton-Copilot.md" "projects/01-Ableton-Copilot.md"
+          cp "private_src/projectSummaries/approved/CLaMP3 Audio Semantic Search.md" "projects/02-CLaMP3-Audio-Semantic-Search.md"
+          cp "private_src/projectSummaries/approved/Density Audio Workstation.md" "projects/03-Density-DAW.md"
+          cp "private_src/projectSummaries/approved/Density Pro - Full Stack.md" "projects/04-Density-Pro-Full-Stack.md"
+
+      # OPTIONAL: generate a simple index page from the files we just copied
+      - name: Build index.md
+        run: |
+          python - <<'PY'
+          import os, urllib.parse
+          files = sorted([f for f in os.listdir('projects') if f.endswith('.md')])
+          with open('index.md', 'w', encoding='utf-8') as out:
+              out.write('---\nlayout: home\ntitle: Selected Projects\n---\n\n')
+              out.write("Welcome! These are curated projects across Audio, AI, and full-stack engineering.\n\n")
+              for f in files:
+                  # pretty title from filename
+                  title = os.path.splitext(f)[0].split('-', 1)[-1].replace('-', ' ')
+                  url = 'projects/' + urllib.parse.quote(f)
+                  out.write(f'- [{title}]({url})\n')
+          PY
+
+      # Minimal Jekyll config (created once; kept updated if present)
+      - name: Ensure Jekyll config exists
+        run: |
+          if [ ! -f _config.yml ]; then
+            cat > _config.yml <<'EOF'
+          title: Audio • AI • Engineering
+          theme: minima
+          description: Selected project summaries by <Your Name>
+          markdown: kramdown
+          EOF
+          fi
+
+      - name: Commit and push changes (if any)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Sync approved summaries from private repo"
+            git push
+          else
+            echo "No changes to commit."
+          fi
