@@ -33,10 +33,10 @@ jobs:
       # COPY ONLY WHITELISTED FILES (edit source paths to match your private repo)
       - name: Copy approved project summaries
         run: |
-          cp "private_src/projectSummaries/approved/Ableton-Copilot.md" "projects/01-Ableton-Copilot.md"
-          cp "private_src/projectSummaries/approved/CLaMP3 Audio Semantic Search.md" "projects/02-CLaMP3-Audio-Semantic-Search.md"
-          cp "private_src/projectSummaries/approved/Density Audio Workstation.md" "projects/03-Density-DAW.md"
-          cp "private_src/projectSummaries/approved/Density Pro - Full Stack.md" "projects/04-Density-Pro-Full-Stack.md"
+          cp "private_src/approved/Ableton-Copilot.md" "projects/01-Ableton-Copilot.md"
+          cp "private_src/approved/CLaMP3 Audio Semantic Search.md" "projects/02-CLaMP3-Audio-Semantic-Search.md"
+          cp "private_src/approved/Density Audio Workstation.md" "projects/03-Density-DAW.md"
+          cp "private_src/approved/Density Pro - Full Stack.md" "projects/04-Density-Pro-Full-Stack.md"
 
       # OPTIONAL: generate a simple index page from the files we just copied
       - name: Build index.md
