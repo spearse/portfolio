@@ -5,3 +5,8 @@ theme: minima
 description: Selected projects in audio software, AI, and full-stack development.
 markdown: kramdown
 
+# Important for project sites:
+url: "https://spearse.github.io"
+baseurl: "/portfolio"   # <— if your repo is named "portfolio"
+
+

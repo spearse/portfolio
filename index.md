@@ -116,25 +116,25 @@ footer {
   <div class="card">
     <h2>Ableton Copilot</h2>
     <p>AI-powered composition and automation system linking Ableton Live with Google Gemini for generative MIDI, semantic audio search, and intelligent arrangement workflows.</p>
-    <a href="projects/01-Ableton-Copilot.md">Read&nbsp;more&nbsp;→</a>
+    <a href="{{ site.baseurl }}/projects/01-Ableton-Copilot.md">Read&nbsp;more&nbsp;→</a>
   </div>
 
   <div class="card">
     <h2>CLaMP3 Audio Semantic Search</h2>
     <p>Semantic audio retrieval engine using multimodal embeddings and FAISS indexing to search sound libraries via natural language or hybrid similarity queries.</p>
-    <a href="projects/02-CLaMP3-Audio-Semantic-Search.md">Read&nbsp;more&nbsp;→</a>
+    <a href="{{ site.baseurl }}/projects/02-CLaMP3-Audio-Semantic-Search.md">Read&nbsp;more&nbsp;→</a>
   </div>
 
   <div class="card">
     <h2>Density Audio Workstation</h2>
     <p>DJ-focused DAW built in C++/JUCE featuring automatic CDJ beat-grid extraction, advanced DSP effects, and intelligent track segmentation with tempo automation.</p>
-    <a href="projects/03-Density-DAW.md">Read&nbsp;more&nbsp;→</a>
+    <a href="{{ site.baseurl }}/projects/03-Density-DAW.md">Read&nbsp;more&nbsp;→</a>
   </div>
 
   <div class="card">
     <h2>Density Pro — Full Stack</h2>
     <p>React + NestJS platform implementing a Rent-to-Own licensing system with real-time payment tracking, webhook orchestration, and seamless ownership conversion.</p>
-    <a href="projects/04-Density-Pro-Full-Stack.md">Read&nbsp;more&nbsp;→</a>
+    <a href="{{ site.baseurl }}/projects/04-Density-Pro-Full-Stack.md">Read&nbsp;more&nbsp;→</a>
   </div>
 </div>
 

@@ -39,6 +39,26 @@ jobs:
           cp "private_src/approved/CLaMP3 Audio Semantic Search.md" "projects/02-CLaMP3-Audio-Semantic-Search.md"
           cp "private_src/approved/Density Audio Workstation.md" "projects/03-Density-DAW.md"
           cp "private_src/approved/Density Pro - Full Stack.md" "projects/04-Density-Pro-Full-Stack.md"
+          
+      - name: Ensure front-matter on project pages
+        run: |
+          for f in projects/*.md; do
+            # If file already has front matter, skip
+            if [ "$(head -n1 "$f")" = "---" ]; then
+              continue
+            fi
+            title="$(basename "$f" .md | sed 's/^[0-9]\+-//' | sed 's/-/ /g')"
+            tmp="$(mktemp)"
+            {
+              echo '---'
+              echo 'layout: page'
+              echo "title: ${title}"
+              echo 'permalink: /projects/'"$(basename "$f" .md)"'/'   # pretty URL
+              echo '---'
+              cat "$f"
+            } > "$tmp"
+            mv "$tmp" "$f"
+          done
 
       - name: Build index.md
         run: |
