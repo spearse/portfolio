@@ -4,26 +4,59 @@ title: Selected Projects
 ---
 
 <style>
-body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: #fafafa;
-  color: #222;
+/* --- Color system --- */
+:root {
+  --bg: #fafafa;
+  --text: #222;
+  --muted: #666;
+  --card: #ffffff;
+  --link: #0a7bd6;
+  --shadow: 0 2px 10px rgba(0,0,0,0.08);
+  --shadow-hover: 0 4px 16px rgba(0,0,0,0.12);
+  --border: rgba(0,0,0,0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0f12;
+    --text: #e7e7ea;
+    --muted: #a2a2ad;
+    --card: #15171c;
+    --link: #6bb6ff;
+    --shadow: 0 1px 0 rgba(255,255,255,0.06);
+    --shadow-hover: 0 2px 0 rgba(255,255,255,0.08);
+    --border: rgba(255,255,255,0.08);
+  }
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
 header {
   text-align: center;
   padding: 3rem 1rem 2rem;
 }
 header h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.3rem;
+  margin: 0 0 .3rem 0;
 }
 header p {
   font-size: 1rem;
-  color: #666;
-  margin-top: 0;
+  color: var(--muted);
+  margin: 0;
 }
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -32,40 +65,45 @@ header p {
   max-width: 1100px;
   margin: auto;
 }
+
 .card {
-  background: white;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color .2s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--link);
 }
 .card h2 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  margin: 0 0 .5rem 0;
 }
 .card p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: #444;
-  margin-bottom: 1rem;
+  font-size: .95rem;
+  line-height: 1.45;
+  color: var(--text);
+  opacity: .92;
+  margin: 0 0 1rem 0;
 }
 .card a {
-  color: #007acc;
   font-weight: 600;
-  text-decoration: none;
 }
+
 footer {
   text-align: center;
-  padding: 2rem;
-  color: #888;
-  font-size: 0.9rem;
+  padding: 2rem 1rem 3rem;
+  color: var(--muted);
+  font-size: .95rem;
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
 }
 </style>
 
@@ -83,7 +121,7 @@ footer {
 
   <div class="card">
     <h2>CLaMP3 Audio Semantic Search</h2>
-    <p>Semantic audio retrieval engine using multimodal embeddings and FAISS indexing to search sound libraries via natural-language or hybrid similarity queries.</p>
+    <p>Semantic audio retrieval engine using multimodal embeddings and FAISS indexing to search sound libraries via natural language or hybrid similarity queries.</p>
     <a href="projects/02-CLaMP3-Audio-Semantic-Search.md">Read&nbsp;more&nbsp;→</a>
   </div>
 
