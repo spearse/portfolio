@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Density Audio Workstation — DJ-Focused DAW with CDJ Integration
+title: Density DAW
+permalink: /projects/density-audio-workstation/
 ---
 
 # Project: Density Audio Workstation

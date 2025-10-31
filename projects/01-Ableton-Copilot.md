@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Ableton Copilot — AI-Powered DAW Automation
+title: Ableton Copilot
+permalink: /projects/ableton-copilot/
 ---
-
 
 # Project: Ableton Copilot - AI-Powered DAW Automation & Music Composition System
 

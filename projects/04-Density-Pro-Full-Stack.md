@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Density Pro — Professional DJ Software with Rent-to-Own Licensing
+title: Density Pro — Full Stack
+permalink: /projects/density-pro-full-stack/
 ---
 
 # Project: Density Pro - Professional DJ Software with Flexible Licensing

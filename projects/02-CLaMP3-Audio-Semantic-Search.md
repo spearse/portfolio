@@ -1,8 +1,8 @@
 ---
 layout: page
-title: CLaMP3 Audio Semantic Search — Multimodal Audio Retrieval
+title: CLaMP3 Audio Semantic Search
+permalink: /projects/clamp3-audio-semantic-search/
 ---
-
 # Project: CLaMP3 Audio Semantic Search System
 
 ## Summary
