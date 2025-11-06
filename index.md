@@ -1,6 +1,5 @@
 ---
 layout: home
-title: Selected Projects
 ---
 
 <section class="hero">
