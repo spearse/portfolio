@@ -18,13 +18,62 @@
           <a href="{{ site.baseurl }}/about/">About</a>
           <a href="{{ site.baseurl }}/#projects">Projects</a>
         </nav>
+        <button class="burger" aria-label="Menu" aria-expanded="false">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
       </div>
     </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+      <nav class="mobile-nav">
+        <a href="{{ site.baseurl }}/" class="mobile-nav-link">Home</a>
+        <a href="{{ site.baseurl }}/about/" class="mobile-nav-link">About</a>
+        <a href="{{ site.baseurl }}/#projects" class="mobile-nav-link">Projects</a>
+      </nav>
+    </div>
 
     <main>
       <div class="wrapper">
         {{ content }}
       </div>
     </main>
+
+    <script>
+      // Burger menu toggle
+      const burger = document.querySelector('.burger');
+      const overlay = document.querySelector('.mobile-nav-overlay');
+      const body = document.body;
+
+      burger.addEventListener('click', () => {
+        const isOpen = burger.getAttribute('aria-expanded') === 'true';
+        burger.setAttribute('aria-expanded', !isOpen);
+        burger.classList.toggle('active');
+        overlay.classList.toggle('active');
+        body.classList.toggle('nav-open');
+      });
+
+      // Close menu when clicking a link
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          burger.setAttribute('aria-expanded', 'false');
+          burger.classList.remove('active');
+          overlay.classList.remove('active');
+          body.classList.remove('nav-open');
+        });
+      });
+
+      // Close menu when clicking overlay
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          burger.setAttribute('aria-expanded', 'false');
+          burger.classList.remove('active');
+          overlay.classList.remove('active');
+          body.classList.remove('nav-open');
+        }
+      });
+    </script>
   </body>
 </html>
