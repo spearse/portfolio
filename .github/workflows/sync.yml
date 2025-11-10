@@ -35,23 +35,57 @@ jobs:
           # Project files are now manually maintained with full Jekyll front matter
           echo "Project files are manually maintained"
 
-      - name: Copy project summaries from portfolio-web
+      - name: Set up Python for transformation
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Copy and transform project summaries from portfolio-web
         run: |
-          # WORKFLOW CURRENTLY DISABLED
-          # Portfolio project pages are manually maintained with full Jekyll formatting
-          #
-          # To re-enable automated syncing:
-          # 1. Ensure projectSummaries/portfolio-web files have proper Jekyll front matter
-          # 2. Update the copy commands below to match current file structure
-          # 3. Uncomment the rm -rf above
-          #
-          # Current manual files:
-          #   - projects/01-Density-Copilot.md (VC-validated AI assistant)
-          #   - projects/02-Density-DAW.md (C++/JUCE professional DAW)
-          #   - projects/03-Compose-with-Sounds.md (EU-funded educational DAW)
-          #   - projects/04-CLaMP3-Audio-Semantic-Search.md (ML semantic search)
-          #   - projects/05-Density-Web-Platform.md (Full-stack RTO payment system)
-          echo "Sync workflow is currently disabled - files are manually maintained"
+          # File mappings: source (in projectSummaries/portfolio-web) -> destination (in portfolio/projects)
+          declare -A mappings=(
+            ["density-copilot.md"]="01-Density-Copilot.md"
+            ["density-daw.md"]="02-Density-DAW.md"
+            ["density-fullstack.md"]="05-Density-Web-Platform.md"
+          )
+
+          # NOTE: Files 03-Compose-with-Sounds.md and 04-CLaMP3-Audio-Semantic-Search.md
+          # are not yet in projectSummaries/portfolio-web, so they remain manually maintained
+
+          for source in "${!mappings[@]}"; do
+            dest="${mappings[$source]}"
+            source_path="private_src/portfolio-web/$source"
+            dest_path="projects/$dest"
+
+            if [ -f "$source_path" ]; then
+              echo "Processing $source -> $dest"
+
+              # Extract title and number
+              title=$(head -n 1 "$source_path" | sed 's/^# //' | sed 's/ - .*//')
+              number=$(echo "$dest" | grep -oE '^[0-9]+')
+
+              # Create file with front matter
+              cat > "$dest_path" <<FRONTMATTER
+          ---
+          layout: default
+          title: $title
+          permalink: /projects/${dest%.md}.html
+          ---
+
+          FRONTMATTER
+
+              # Append content
+              cat "$source_path" >> "$dest_path"
+
+              echo "✅ Copied $dest"
+            else
+              echo "⚠️  Source file not found: $source_path"
+            fi
+          done
+
+          echo ""
+          echo "⚠️  NOTE: Visual formatting needs to be applied manually or via Claude Code"
+          echo "Reference template: projects/02-Density-DAW.md"
           
       - name: Ensure front-matter on project pages
         run: |
@@ -104,7 +138,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Sync approved summaries from private repo"
+            git commit -m "Sync approved summaries from private repo
+
+          ⚠️  Visual formatting pending - needs manual application
+          Reference template: projects/02-Density-DAW.md
+
+          Use Claude Code to apply visual enhancements:
+          - Highlight boxes with key achievements
+          - Metrics showcasing impact
+          - Two-column layouts for scannability"
             git push
           else
             echo "No changes to commit."
