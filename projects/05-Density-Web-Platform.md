@@ -14,7 +14,7 @@ permalink: /projects/05-Density-Web-Platform.html
 
 ---
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 ### 🎯 Key Achievements
 
@@ -57,7 +57,7 @@ While serving as Tech Lead for Density's native DAW, I contributed to the compan
 ## The Business Challenge
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>💰 New Purchase Model</h4>
     <ul>
       <li><strong>One-time purchase:</strong> $200 upfront</li>
@@ -66,7 +66,7 @@ While serving as Tech Lead for Density's native DAW, I contributed to the compan
       <li>Early buyout option available</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>⚖️ Backward Compatibility</h4>
     <ul>
       <li>Existing subscribers continue subscriptions</li>
@@ -75,7 +75,7 @@ While serving as Tech Lead for Density's native DAW, I contributed to the compan
       <li>Support both models simultaneously</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>🎁 Hardware Bundle Discounts</h4>
     <ul>
       <li>Discount hardware based on RTO progress</li>
@@ -84,7 +84,7 @@ While serving as Tech Lead for Density's native DAW, I contributed to the compan
       <li>Bundle pricing (Pro + Hardware together)</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>✅ Financial Correctness</h4>
     <ul>
       <li>Accurate payment tracking (can't lose money)</li>
@@ -101,7 +101,7 @@ While serving as Tech Lead for Density's native DAW, I contributed to the compan
 
 ### RTO State Machine
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 Designed state-based system managing complete RTO lifecycle:
 
@@ -127,7 +127,7 @@ Designed state-based system managing complete RTO lifecycle:
 The most technically challenging aspect—handling multiple discount factors:
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Discount Factors</h4>
     <ul>
       <li><strong>RTO Progress:</strong> 0-14 payments completed</li>
@@ -137,7 +137,7 @@ The most technically challenging aspect—handling multiple discount factors:
       <li><strong>Special Events:</strong> Black Friday, limited-time</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Edge Cases Handled</h4>
     <ul>
       <li>User 8/14 through RTO + Black Friday code + bundle</li>
@@ -154,7 +154,7 @@ The most technically challenging aspect—handling multiple discount factors:
 
 ### Chargebee Integration & Webhook Processing
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 Built robust webhook processing keeping local database synchronized with Chargebee:
 
@@ -204,7 +204,7 @@ SubscriptionLock {
 
 ## Testing Strategy
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 Worked extensively with QA team using full environment isolation:
 
@@ -224,22 +224,22 @@ Worked extensively with QA team using full environment isolation:
 ## Key Technical Challenges Solved
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Financial Logic Correctness</h4>
     <p><strong>Problem:</strong> Bugs are expensive with money. Need absolute correctness.</p>
     <p><strong>Solution:</strong> Comprehensive validation, database constraints, extensive logging, reconciliation jobs, price floor enforcement.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Backward Compatibility</h4>
     <p><strong>Problem:</strong> Can't disrupt existing paying subscribers during migration.</p>
     <p><strong>Solution:</strong> License type enum supporting both models, feature flags, careful webhook handling, migration UI with explanations.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Discount Edge Cases</h4>
     <p><strong>Problem:</strong> Multiple discount variables created combinatorial explosion of scenarios.</p>
     <p><strong>Solution:</strong> Discount calculation service with extensive unit tests, minimum price floors, clear precedence rules, validation.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Production Reliability</h4>
     <p><strong>Problem:</strong> Kubernetes pod restarts causing webhook processing issues.</p>
     <p><strong>Solution:</strong> Database-backed subscription locking, idempotency through queries not memory, transaction isolation, monitoring.</p>
@@ -271,7 +271,7 @@ Worked extensively with QA team using full environment isolation:
 
 ### Business Value
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **New Business Model:**
 - Enabled pivot from subscription to ownership without disrupting revenue
@@ -306,7 +306,7 @@ Worked extensively with QA team using full environment isolation:
 
 ## Key Takeaways
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **Full-Stack Versatility:** Switched from C++ native development (DAW) to TypeScript full-stack work based on company needs. Shows adaptability across entire technology stack.
 

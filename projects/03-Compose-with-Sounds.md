@@ -14,7 +14,7 @@ permalink: /projects/03-Compose-with-Sounds.html
 
 ---
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 ### 🎯 Key Achievements
 
@@ -57,7 +57,7 @@ As sole developer over 7 years alongside academic responsibilities as Senior Lec
 ## The Educational Challenge
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>🎓 Pedagogical Needs</h4>
     <ul>
       <li>Intuitive sound manipulation without notation literacy</li>
@@ -66,7 +66,7 @@ As sole developer over 7 years alongside academic responsibilities as Senior Lec
       <li>Balance power with simplicity for learners</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>🌍 Deployment Requirements</h4>
     <ul>
       <li>Accessible across languages and educational systems</li>
@@ -85,7 +85,7 @@ As sole developer over 7 years alongside academic responsibilities as Senior Lec
 
 ### Custom Audio Engine (FSOM)
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 Built **Free Sound Object Mixer (FSOM)** in C++ from scratch:
 
@@ -120,7 +120,7 @@ Built **Free Sound Object Mixer (FSOM)** in C++ from scratch:
 ## Development Process
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>📅 Part-Time Development</h4>
     <ul>
       <li>~4 hours per week over 7 years</li>
@@ -129,7 +129,7 @@ Built **Free Sound Object Mixer (FSOM)** in C++ from scratch:
       <li>Careful project management and prioritization</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>👥 User-Centered Design</h4>
     <ul>
       <li>Regular visits to schools across Europe</li>
@@ -149,7 +149,7 @@ Built **Free Sound Object Mixer (FSOM)** in C++ from scratch:
 
 ## Key Features
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **Sound Object Manipulation:**
 - Import, edit, and arrange sound objects
@@ -213,22 +213,22 @@ Built **Free Sound Object Mixer (FSOM)** in C++ from scratch:
 ## Key Challenges Solved
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Long-Term Solo Maintenance</h4>
     <p><strong>Problem:</strong> Maintaining complex C++ codebase part-time over 7 years while fulfilling academic duties.</p>
     <p><strong>Solution:</strong> Clean architecture, well-documented code, modular design, careful version control, prioritized stability.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Cross-Platform Audio</h4>
     <p><strong>Problem:</strong> Consistent audio behavior across macOS, Windows, Linux with different drivers and APIs.</p>
     <p><strong>Solution:</strong> Platform abstraction layer, Qt's cross-platform capabilities, extensive testing, fallback strategies.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Educational vs. Professional Balance</h4>
     <p><strong>Problem:</strong> Software powerful enough for genuine composition but accessible to learners.</p>
     <p><strong>Solution:</strong> Progressive disclosure, carefully designed defaults, guided workflows, visual feedback making processes visible.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Internationalization at Scale</h4>
     <p><strong>Problem:</strong> Supporting 10 languages across different educational systems.</p>
     <p><strong>Solution:</strong> Qt i18n framework, collaboration with native speakers, cultural adaptation, testing with local educators.</p>
@@ -249,7 +249,7 @@ Built **Free Sound Object Mixer (FSOM)** in C++ from scratch:
 
 ## What I Learned
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **Building for Education is Different:**
 - Discoverability over power-user efficiency

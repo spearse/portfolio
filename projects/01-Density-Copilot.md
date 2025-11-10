@@ -14,7 +14,7 @@ permalink: /projects/01-Density-Copilot.html
 
 ---
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 ### 🎯 Key Achievements
 
@@ -57,7 +57,7 @@ Density Copilot is an AI-powered music production assistant generating professio
 ## The Challenge
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>⏱️ Time-Consuming Production</h4>
     <ul>
       <li>Hours deciding when to introduce elements</li>
@@ -66,7 +66,7 @@ Density Copilot is an AI-powered music production assistant generating professio
       <li>Finding samples that work together</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>🎵 Existing Solutions Fall Short</h4>
     <ul>
       <li><strong>Manual arrangement:</strong> Trial and error</li>
@@ -84,7 +84,7 @@ Density Copilot is an AI-powered music production assistant generating professio
 
 ### Architecture & Core Systems
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 - **Two-process architecture** - Desktop app independent from DAW for stability
 - **Socket-based IPC** - Higher bandwidth and flexibility for DAW communication
@@ -129,7 +129,7 @@ Designed markup language bridging LLMs and musical structure:
 ```
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Why DensityMark?</h4>
     <ul>
       <li><strong>Compact:</strong> LLMs generate efficiently</li>
@@ -138,7 +138,7 @@ Designed markup language bridging LLMs and musical structure:
       <li><strong>Validatable:</strong> Clear syntax enables error checking</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Parser Features</h4>
     <ul>
       <li>Streaming for real-time LLM output</li>
@@ -153,7 +153,7 @@ Designed markup language bridging LLMs and musical structure:
 
 ### Semantic Audio Search Infrastructure
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **Two-Stage Pipeline:**
 1. **MERT feature extraction** - 768-dimensional audio features
@@ -189,22 +189,22 @@ Replaced deterministic genre templates with semantic discovery:
 ## Key Technical Challenges Solved
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Streaming LLM Parser</h4>
     <p><strong>Problem:</strong> Parse incomplete token-by-token LLM output for real-time feedback.</p>
     <p><strong>Solution:</strong> Generator-based parsing with incremental validation, extracting valid placements from partial output.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Musical Rule Validation</h4>
     <p><strong>Problem:</strong> Ensure arrangements are musically coherent, not just syntactically valid.</p>
     <p><strong>Solution:</strong> Layered validation: syntax → semantic → musical rules → phrasing.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Rapid ML Pipeline</h4>
     <p><strong>Problem:</strong> Build production ML pipeline in < 1 month with limited time budget.</p>
     <p><strong>Solution:</strong> Prioritized core functionality, two encoding modes (dev/prod), Dockerized for reproducibility.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Connection Resilience</h4>
     <p><strong>Problem:</strong> Desktop app and DAW in separate processes, connections can drop.</p>
     <p><strong>Solution:</strong> Health monitoring, auto-reconnect with backoff, graceful degradation, clear UI feedback.</p>
@@ -217,7 +217,7 @@ Replaced deterministic genre templates with semantic discovery:
 
 ### Business Validation
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 - **Shipped demos to multiple VCs** with Copilot cited as key differentiator
 - **Driving "heavy investment" discussions** per company leadership

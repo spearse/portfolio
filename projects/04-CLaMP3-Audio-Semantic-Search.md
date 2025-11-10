@@ -14,7 +14,7 @@ permalink: /projects/04-CLaMP3-Audio-Semantic-Search.html
 
 ---
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 ### 🎯 Key Achievements
 
@@ -57,7 +57,7 @@ I built complete semantic audio search infrastructure in **under 1 month**, proc
 ## The Challenge
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>🎯 Search Requirements</h4>
     <ul>
       <li>Natural language descriptions ("punchy techno kick")</li>
@@ -66,7 +66,7 @@ I built complete semantic audio search infrastructure in **under 1 month**, proc
       <li>Sub-second queries across tens of thousands of files</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>⚡ Production Requirements</h4>
     <ul>
       <li>Reproducible deployment (Docker)</li>
@@ -83,7 +83,7 @@ I built complete semantic audio search infrastructure in **under 1 month**, proc
 
 ### Two-Stage Embedding Pipeline
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **Stage 1: MERT Feature Extraction**
 - Model: MERT-v1-95M (m-a-p/MERT-v1-95M)
@@ -108,7 +108,7 @@ I built complete semantic audio search infrastructure in **under 1 month**, proc
 **Optimized Implementation:** 1-2 seconds per file (production)
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Sequential Processing</h4>
     <ul>
       <li><strong>Use case:</strong> Docker with limited memory</li>
@@ -118,7 +118,7 @@ I built complete semantic audio search infrastructure in **under 1 month**, proc
       <li>Runs on modest hardware</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Parallel Processing</h4>
     <ul>
       <li><strong>Use case:</strong> GCP VMs with GPUs</li>
@@ -136,7 +136,7 @@ I built complete semantic audio search infrastructure in **under 1 month**, proc
 
 ### FAISS Vector Indexing
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **Index Structure:**
 - Type: Flat L2 index for exact nearest neighbor search
@@ -176,7 +176,7 @@ POST /search/hybrid
 
 ### Docker Deployment
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **Containerization Features:**
 - Python 3.8+ base image
@@ -197,22 +197,22 @@ POST /search/hybrid
 ## Key Technical Challenges Solved
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Memory Constraints in Docker</h4>
     <p><strong>Problem:</strong> Loading MERT and CLaMP3 simultaneously exhausted container memory.</p>
     <p><strong>Solution:</strong> Sequential processing mode with aggressive cleanup, lazy model loading, dual deployment strategy.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>15-30x Performance Optimization</h4>
     <p><strong>Problem:</strong> Initial ~12s per file made batch processing impractical.</p>
     <p><strong>Solution:</strong> Model reuse, batch processing, worker pools, caching intermediate features. Result: 1-2s per file.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Cross-Modal Alignment</h4>
     <p><strong>Problem:</strong> Text and audio in different spaces—how to search text queries against audio embeddings?</p>
     <p><strong>Solution:</strong> CLaMP3 model trained to align audio and text in shared semantic space enabling cross-modal search.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Production Reliability</h4>
     <p><strong>Problem:</strong> ML pipelines can fail (OOM, corrupt files, missing data).</p>
     <p><strong>Solution:</strong> Resume-capable checkpointing, file validation, error logging, automated FAISS index rebuilding, health checks.</p>
@@ -261,7 +261,7 @@ POST /search/hybrid
 
 ### Development Speed
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **Complete system delivered in < 1 month:**
 - Week 1: Research, model selection, initial prototype
@@ -287,7 +287,7 @@ POST /search/hybrid
 
 ## What Makes This Special
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **Rapid Execution:** Complete ML pipeline in < 1 month while maintaining production quality. Shows ability to learn new domains quickly.
 

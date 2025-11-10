@@ -15,7 +15,7 @@ permalink: /projects/02-Density-DAW.html
 
 ---
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 ### 🎯 Key Achievements
 
@@ -60,7 +60,7 @@ As tech lead for 3 years, I transformed Density from a Mac-only application with
 When I joined, Density faced critical challenges across stability, platform reach, and development velocity:
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>⚠️ Stability Issues</h4>
     <ul>
       <li><strong>5% crash rate</strong> affecting user trust</li>
@@ -68,7 +68,7 @@ When I joined, Density faced critical challenges across stability, platform reac
       <li>No systematic error tracking</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>🖥️ Platform Limitations</h4>
     <ul>
       <li><strong>Mac-only</strong> missing Windows DJ market</li>
@@ -76,7 +76,7 @@ When I joined, Density faced critical challenges across stability, platform reac
       <li>Scattered platform-specific code</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>🐌 Slow Development</h4>
     <ul>
       <li><strong>Monthly releases</strong> hindering iteration</li>
@@ -84,7 +84,7 @@ When I joined, Density faced critical challenges across stability, platform reac
       <li>No CI/CD infrastructure</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>⚡ Technical Complexity</h4>
     <ul>
       <li><strong>&lt;10ms latency</strong> requirements</li>
@@ -103,7 +103,7 @@ When I joined, Density faced critical challenges across stability, platform reac
 
 I led the transformation from Mac-only to fully cross-platform, requiring fundamental architectural changes beyond simple porting.
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **Core Achievements:**
 
@@ -132,7 +132,7 @@ Designed and implemented real-time audio engine with strict <10ms latency requir
 Architected the effects processing system and implemented key DSP components:
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>LUFS Metering</h4>
     <ul>
       <li>ITU-R BS.1770-4 broadcast standard</li>
@@ -141,7 +141,7 @@ Architected the effects processing system and implemented key DSP components:
       <li>Multi-threaded offline analysis</li>
     </ul>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Filter Modeling</h4>
     <ul>
       <li>Matched Pioneer DJ hardware profiles</li>
@@ -164,7 +164,7 @@ Architected the effects processing system and implemented key DSP components:
 
 Established monitoring and feature management systems that dramatically improved reliability:
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 **Sentry Integration:**
 - Crash tracking reduced rate from **5% to 3%** (40% improvement)
@@ -213,7 +213,7 @@ Transitioned into technical leadership role after 1.5 years:
 
 ## Technical Architecture
 
-<div class="highlight-box">
+<div class="highlight-box" markdown="1">
 
 ### Modular Unity Build on JUCE Framework
 
@@ -271,22 +271,22 @@ The application is actively used by professional DJs worldwide, with hardware de
 ## Key Challenges Solved
 
 <div class="two-col">
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Cross-Platform Threading</h4>
     <p><strong>Problem:</strong> Different threading models between macOS and Windows required careful synchronization design.</p>
     <p><strong>Solution:</strong> Implemented platform-agnostic abstractions with lock-free communication patterns using JUCE primitives and custom implementations.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Real-Time Performance</h4>
     <p><strong>Problem:</strong> Meeting &lt;10ms latency while performing complex DSP required extensive optimization.</p>
     <p><strong>Solution:</strong> Profiling-driven optimization, careful memory management avoiding allocations, SIMD optimization for critical paths.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Java/C++ Interop</h4>
     <p><strong>Problem:</strong> Hardware integration required launching Java application for CDJ recording with platform differences.</p>
     <p><strong>Solution:</strong> Custom process management and stream handling with platform-specific implementations and robust error handling.</p>
   </div>
-  <div class="col-box">
+  <div class="col-box" markdown="1">
     <h4>Filter Accuracy</h4>
     <p><strong>Problem:</strong> Matching Pioneer hardware sound profiles required precise modeling.</p>
     <p><strong>Solution:</strong> Iterative measurement using professional equipment, mathematical modeling, validation with professional DJs.</p>
