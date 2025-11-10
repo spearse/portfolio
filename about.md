@@ -155,90 +155,6 @@ As Density invested in LLM-powered music production tools, I pivoted to lead **C
 
 ---
 
-## What Makes My Profile Unique
-
-<div class="two-col">
-  <div class="col-box" markdown="1">
-
-**🎯 Domain Expertise Applied**
-
-13+ years of music computing knowledge directly informing system design. Not just an engineer building audio tools—I understand the creative workflows deeply from research and professional use.
-
-  </div>
-  <div class="col-box" markdown="1">
-
-**🔥 Rare Skill Combination**
-
-Audio DSP + AI/ML + Production Engineering + Music Domain. Very few engineers have this complete combination across all layers.
-
-  </div>
-  <div class="col-box" markdown="1">
-
-**🔬 Academic Research Background**
-
-PhD and 9 years research experience bring deep technical thinking, novel problem-solving approaches, and ability to navigate cutting-edge domains.
-
-  </div>
-  <div class="col-box" markdown="1">
-
-**💼 Proven Business Impact**
-
-Built systems driving VC investment (Copilot), used at major festivals worldwide (DAW), deployed across Europe (educational software). Real business and user impact.
-
-  </div>
-  <div class="col-box" markdown="1">
-
-**🔄 Full Lifecycle Experience**
-
-From research prototypes to production systems supporting thousands of users. Experience with every phase: ideation, architecture, implementation, deployment, monitoring, iteration.
-
-  </div>
-  <div class="col-box" markdown="1">
-
-**⚡ Fast Execution**
-
-Semantic search infrastructure built in <1 month, RTO payment system delivered in 2 months—all while maintaining quality and comprehensive testing.
-
-  </div>
-</div>
-
----
-
-## Current Focus
-
-I'm interested in opportunities that leverage my unique combination of music computing domain expertise and production engineering skills:
-
-<div class="two-col">
-  <div class="col-box" markdown="1">
-
-### 🎵 Audio AI/ML Systems
-Spotify, Google Research, Meta Reality Labs, Apple Music
-
-  </div>
-  <div class="col-box" markdown="1">
-
-### 🎚️ Professional Audio Tools
-Native Instruments, Ableton, iZotope, Steinberg
-
-  </div>
-  <div class="col-box" markdown="1">
-
-### 🔬 Research Labs
-Music and technology (academic or industry)
-
-  </div>
-  <div class="col-box" markdown="1">
-
-### 🚀 Senior/Staff Roles
-Where domain expertise adds significant value
-
-  </div>
-</div>
-
-**Preferred locations:** UK-based, EU remote, or US remote opportunities considered for exceptional fit.
-
----
-
 ## Contact & Links
 
 <div class="two-col">
@@ -257,6 +173,8 @@ Where domain expertise adds significant value
 
   </div>
 </div>
+
+**Preferred locations:** UK-based, EU remote, or US remote opportunities considered for exceptional fit.
 
 Feel free to reach out if you'd like to discuss music technology, AI systems for creative applications, or potential collaborations.
 
