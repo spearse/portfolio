@@ -314,6 +314,85 @@ main{padding:1.2rem 0 2rem}
   font-weight:600;
 }
 
+/* Highlight boxes for key info */
+.highlight-box{
+  background:linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-left:4px solid #4a90e2;
+  padding:1.5rem;
+  margin:2rem 0;
+  border-radius:8px;
+  box-shadow:var(--shadow);
+}
+
+.highlight-box h3,
+.highlight-box h4{
+  margin-top:0;
+  color:var(--ink);
+  border:none;
+  padding:0;
+}
+
+.highlight-box ul{
+  margin-bottom:0;
+}
+
+/* Metrics/stats callout */
+.metrics-box{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:1rem;
+  margin:2rem 0;
+}
+
+.metric{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:1.2rem;
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+
+.metric-value{
+  font-size:2rem;
+  font-weight:700;
+  color:#4a90e2;
+  display:block;
+  margin-bottom:.3rem;
+}
+
+.metric-label{
+  color:var(--muted);
+  font-size:.9rem;
+  display:block;
+}
+
+/* Two-column layout for comparison */
+.two-col{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:1.5rem;
+  margin:1.5rem 0;
+}
+
+.col-box{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:1.5rem;
+  box-shadow:var(--shadow);
+}
+
+.col-box h4{
+  margin-top:0;
+  margin-bottom:1rem;
+  color:var(--ink);
+}
+
+.col-box ul{
+  margin-bottom:0;
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .hero{padding:1.5rem 0 1rem}

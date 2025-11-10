@@ -15,6 +15,38 @@ permalink: /projects/02-Density-DAW.html
 
 ---
 
+<div class="highlight-box">
+
+### 🎯 Key Achievements
+
+- **Led cross-platform expansion** from Mac-only to Windows, opening DJ-dominant market
+- **Reduced crash rate 40%** (5% → 3%) through Sentry integration and reliability engineering
+- **Accelerated releases 6x faster** (monthly → every 1.5 weeks) with complete CI/CD pipeline
+- **Built real-time audio engine** with <10ms latency using lock-free architecture
+- **Implemented broadcast-standard DSP** (LUFS metering, filter modeling, effects processing)
+- **Promoted to Tech Lead** after 1.5 years based on technical contributions and leadership
+
+</div>
+
+<div class="metrics-box">
+  <div class="metric">
+    <span class="metric-value">40%</span>
+    <span class="metric-label">Crash Reduction<br>(5% → 3%)</span>
+  </div>
+  <div class="metric">
+    <span class="metric-value">6×</span>
+    <span class="metric-label">Faster Releases<br>(Monthly → 1.5 weeks)</span>
+  </div>
+  <div class="metric">
+    <span class="metric-value">&lt;10ms</span>
+    <span class="metric-label">Audio Latency<br>(Real-time)</span>
+  </div>
+  <div class="metric">
+    <span class="metric-value">2,500</span>
+    <span class="metric-label">Daily Active<br>Users</span>
+  </div>
+</div>
+
 ## Overview
 
 Density is a professional-grade Digital Audio Workstation (DAW) designed specifically for DJs and live performers. Unlike traditional DAWs built for studio production, Density bridges the gap between DJ software and professional audio editing with hardware integration, intelligent beat analysis, and broadcast-standard audio processing.
@@ -25,28 +57,43 @@ As tech lead for 3 years, I transformed Density from a Mac-only application with
 
 ## The Challenge
 
-When I joined the team, Density faced several critical challenges:
+When I joined, Density faced critical challenges across stability, platform reach, and development velocity:
 
-**Stability & Reliability:**
-- **5% crash rate** affecting user trust
-- Difficult to debug production issues
-- No systematic error tracking
-
-**Platform Limitations:**
-- **Mac-only** preventing access to Windows-dominant DJ market
-- Threading model not portable
-- Platform-specific code scattered throughout
-
-**Development Velocity:**
-- **Monthly release cycles** hindering iteration speed
-- Manual deployment processes
-- No CI/CD infrastructure
-
-**Technical Complexity:**
-- **Real-time audio** with <10ms latency requirements
-- **Professional DSP** (LUFS, filters, effects)
-- **CDJ hardware integration** for live recording
-- **Cross-platform** audio driver handling
+<div class="two-col">
+  <div class="col-box">
+    <h4>⚠️ Stability Issues</h4>
+    <ul>
+      <li><strong>5% crash rate</strong> affecting user trust</li>
+      <li>Difficult to debug production issues</li>
+      <li>No systematic error tracking</li>
+    </ul>
+  </div>
+  <div class="col-box">
+    <h4>🖥️ Platform Limitations</h4>
+    <ul>
+      <li><strong>Mac-only</strong> missing Windows DJ market</li>
+      <li>Non-portable threading model</li>
+      <li>Scattered platform-specific code</li>
+    </ul>
+  </div>
+  <div class="col-box">
+    <h4>🐌 Slow Development</h4>
+    <ul>
+      <li><strong>Monthly releases</strong> hindering iteration</li>
+      <li>Manual deployment processes</li>
+      <li>No CI/CD infrastructure</li>
+    </ul>
+  </div>
+  <div class="col-box">
+    <h4>⚡ Technical Complexity</h4>
+    <ul>
+      <li><strong>&lt;10ms latency</strong> requirements</li>
+      <li>Professional DSP (LUFS, filters)</li>
+      <li>CDJ hardware integration</li>
+      <li>Cross-platform audio drivers</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
@@ -54,165 +101,101 @@ When I joined the team, Density faced several critical challenges:
 
 ### Cross-Platform Architecture Transformation
 
-I led the transformation of Density from a Mac-only application to a fully cross-platform system. This wasn't just a port—it required fundamental architectural changes:
+I led the transformation from Mac-only to fully cross-platform, requiring fundamental architectural changes beyond simple porting.
 
-**Threading Model Redesign:**
-- Accommodated Windows' different concurrency primitives
-- Abstracted platform-specific synchronization
-- Lock-free queue architecture for audio thread communication
-- Thread pool management for background processing
+<div class="highlight-box">
 
-**Java/C++ Interop Architecture:**
-- CDJ hardware recording required Java application communication
-- Windows behavior differed significantly from macOS
-- Custom process management and IPC
-- Stream handling with platform-specific quirks
+**Core Achievements:**
 
-**Complete Windows CI/CD Pipeline:**
-- Built from scratch using GitHub Actions
-- Automated building, testing, and deployment
-- Windows installer generation with code signing
-- Symbol upload for crash symbolication
+- **Threading Model Redesign** - Accommodated Windows' different concurrency primitives with lock-free queue architecture
+- **Java/C++ Interop** - Custom process management for CDJ hardware recording with platform-specific implementations
+- **Complete Windows CI/CD** - Built from scratch using GitHub Actions with automated building, testing, and deployment
+- **Platform Abstraction** - Unified codebase with minimal conditional compilation, maximizing code reuse
 
-**Design Pattern Selection:**
-- Ensured cross-platform stability without code duplication
-- Platform abstraction layers for audio drivers
-- Unified codebase with conditional compilation only where necessary
+</div>
 
 ---
 
 ### Real-Time Audio Processing Architecture
 
-Designed and implemented the real-time audio processing engine with strict latency requirements (<10ms):
+Designed and implemented real-time audio engine with strict <10ms latency requirements:
 
-**Lock-Free Communication:**
-- Thread-safe queues for audio/UI thread communication
-- No blocking operations in audio callbacks
-- Custom ring buffer implementations
-
-**Memory Management:**
-- Pre-allocated buffer pools eliminating runtime allocations
-- RAII patterns for automatic resource cleanup
-- Careful ownership semantics avoiding locks
-
-**Multi-Threaded Pipeline:**
-- Dedicated thread pools for background tasks (analysis, file I/O)
-- Work-stealing scheduler for efficient CPU utilization
-- Priority scheduling for time-critical operations
-
-**SIMD Optimization:**
-- Vectorized DSP operations where performance-critical
-- Data structure alignment for SIMD instructions
-- Platform-specific intrinsics with fallback implementations
+- **Lock-Free Communication** - Thread-safe queues for audio/UI thread communication with no blocking operations
+- **Memory Management** - Pre-allocated buffer pools eliminating runtime allocations, RAII patterns for cleanup
+- **Multi-Threaded Pipeline** - Dedicated thread pools with work-stealing scheduler for efficient CPU utilization
+- **SIMD Optimization** - Vectorized DSP operations with platform-specific intrinsics and fallback implementations
 
 ---
 
 ### DSP & Effects Processing
 
-Architected the effects processing system and implemented several key DSP components:
+Architected the effects processing system and implemented key DSP components:
 
-**LUFS Metering (ITU-R BS.1770-4 Compliant):**
-- Broadcast-standard loudness analysis
-- Sliding window analysis for short-term loudness
-- True peak detection via 4x oversampling
-- Multi-threaded offline analysis with progress tracking
-- Used by professional DJs to meet streaming platform requirements
+<div class="two-col">
+  <div class="col-box">
+    <h4>LUFS Metering</h4>
+    <ul>
+      <li>ITU-R BS.1770-4 broadcast standard</li>
+      <li>Sliding window short-term analysis</li>
+      <li>4x oversampling true peak detection</li>
+      <li>Multi-threaded offline analysis</li>
+    </ul>
+  </div>
+  <div class="col-box">
+    <h4>Filter Modeling</h4>
+    <ul>
+      <li>Matched Pioneer DJ hardware profiles</li>
+      <li>Iterative measurement & validation</li>
+      <li>Professional DJ approval</li>
+      <li>Critical workflow integration</li>
+    </ul>
+  </div>
+</div>
 
-**Filter Modeling:**
-- Matched sonic profile of commercial Pioneer DJ hardware
-- Iterative measurement and validation
-- Professional users achieving expected results
-- Critical for DJ workflow integration
-
-**Fractional Delay Algorithms:**
-- Artifact prevention using crossfade techniques
-- Sample-accurate timing for beat-synchronous effects
-- Parameter smoothing to prevent clicks
-- Wet/dry mixing with custom curves
-
-**Multi-Band Limiting:**
-- Gain reduction visualization
-- Per-band compression with linkage controls
-- Broadcast-ready output levels
-- Real-time parameter updates
-
-**Effects Chain Architecture:**
-- Per-track insert effects
-- Master chain processing
-- Flexible routing
-- Preset management
+**Additional DSP Work:**
+- Fractional delay algorithms with artifact prevention
+- Multi-band limiting with gain reduction visualization
+- Per-track insert effects with flexible routing
+- Preset management and sharing
 
 ---
 
 ### Production Engineering & Reliability
 
-Established production monitoring and feature management systems:
+Established monitoring and feature management systems that dramatically improved reliability:
+
+<div class="highlight-box">
 
 **Sentry Integration:**
-- Crash tracking and performance monitoring
-- **Improved crash rate from 5% to 3%** (40% reduction)
+- Crash tracking reduced rate from **5% to 3%** (40% improvement)
 - Automated symbol upload in CI/CD pipeline
-- Release health tracking
-- Performance profiling in production
+- Release health tracking and performance profiling
+- Comprehensive debugging of production issues
 
-**ConfigCat Feature Flagging:**
-- Gradual rollouts and A/B testing
-- User segmentation for beta features
-- Kill switches for problematic features
-- Percentage-based rollouts
+</div>
 
-**Structured Logging:**
-- Google Cloud Logging integration
-- Contextual information for debugging
-- Performance metrics tracking
-- User interaction analytics
+**Feature Management:**
+- ConfigCat feature flags for gradual rollouts and A/B testing
+- User segmentation for beta features with kill switches
+- Percentage-based rollouts minimizing risk
 
-**Crash Symbolication:**
-- Automated dSYM upload (macOS)
-- PDB symbol management (Windows)
-- Source mapping for release builds
-- Stack trace resolution in Sentry
+**Observability:**
+- Google Cloud Logging integration with contextual debugging info
+- Performance metrics tracking and user interaction analytics
+- Automated crash symbolication (dSYM/PDB management)
 
 ---
 
 ### CI/CD Pipeline Development
 
-Built comprehensive deployment infrastructure accelerating releases from monthly to every 1.5 weeks:
+Built comprehensive deployment infrastructure accelerating releases **6x faster** (monthly → every 1.5 weeks):
 
-**GitHub Actions Workflows:**
-- Automated build, test, and deployment
-- Matrix builds for multiple platforms
-- Parallel execution for fast feedback
-- Dependency caching for speed
-
-**Universal Binary Creation:**
-- Intel and Apple Silicon support in single binary
-- Optimized code paths for each architecture
-- Conditional compilation for platform features
-
-**Code Signing & Notarization:**
-- macOS notarization with hardened runtime
-- Windows Authenticode signing
-- Certificate management in CI
-- Entitlements configuration
-
-**Windows Installer Generation:**
-- InnoSetup-based installers
-- Proper code signing for Windows SmartScreen
-- Upgrade path management
-- Registry integration
-
-**Automated Semantic Versioning:**
-- Version bumps based on commit messages
-- Changelog generation
-- Release notes automation
-- Git tag creation
-
-**Release Cadence:**
-- **From monthly to every 1.5 weeks** (6x faster)
-- Automated deployment to staging and production
-- Rollback capabilities
-- Release health monitoring
+**Key Components:**
+- **GitHub Actions Workflows** - Automated build, test, deployment with matrix builds and dependency caching
+- **Universal Binaries** - Intel and Apple Silicon support in single binary with optimized code paths
+- **Code Signing & Notarization** - macOS notarization with hardened runtime, Windows Authenticode signing
+- **Windows Installers** - InnoSetup-based installers with proper upgrade path management
+- **Semantic Versioning** - Automated version bumps, changelog generation, and release notes
 
 ---
 
@@ -220,287 +203,104 @@ Built comprehensive deployment infrastructure accelerating releases from monthly
 
 Transitioned into technical leadership role after 1.5 years:
 
-**Hiring & Interviewing:**
-- Lead technical interviewer for engineering positions
-- Designed technical interview framework
-- Focus on problem-solving and audio domain knowledge
-- Cultural fit assessment
-
-**Onboarding Program Development:**
-- Training generalist engineers in audio development
-- Comprehensive onboarding documentation
-- Mentorship pairing
-- Progressive complexity in first projects
-
-**Architectural Decision-Making:**
-- Design pattern selection and enforcement
-- Tech stack evaluation
-- Performance vs. maintainability trade-offs
-- Long-term technical roadmap
-
-**Code Review & Mentorship:**
-- Established code review standards
-- Knowledge sharing through detailed feedback
-- Pair programming sessions
-- Technical documentation culture
-
-**Cross-Functional Collaboration:**
-- Product team requirements translation
-- Hardware team integration coordination
-- Customer feedback incorporation
-- Roadmap prioritization
+- **Hiring & Interviewing** - Lead technical interviewer, designed interview framework focusing on problem-solving and audio domain knowledge
+- **Onboarding Program** - Trained generalist engineers in audio development with comprehensive documentation and mentorship
+- **Architectural Decisions** - Design pattern selection, tech stack evaluation, performance vs. maintainability trade-offs
+- **Code Review & Mentorship** - Established code review standards with knowledge sharing through detailed feedback
+- **Cross-Functional Collaboration** - Product requirements translation, hardware team coordination, customer feedback incorporation
 
 ---
 
-## Technical Deep Dive
+## Technical Architecture
 
-### Architecture
+<div class="highlight-box">
 
-The application uses a modular Unity Build architecture built on the JUCE framework:
+### Modular Unity Build on JUCE Framework
 
-**Core Layer:**
-- Global resource management
-- Audio device abstraction (CoreAudio, ASIO, WASAPI)
-- Project lifecycle management
-- Plugin hosting infrastructure
+**Core Layer:** Global resource management, audio device abstraction (CoreAudio, ASIO, WASAPI), plugin hosting
 
-**Audio Processing Layer:**
-- Real-time playback engine (<10ms latency)
-- Track processors with routing
-- Effects chains with parameter automation
-- Sample-accurate timing
+**Audio Processing Layer:** Real-time playback engine (<10ms latency), track processors with routing, effects chains with parameter automation
 
-**Data Model:**
-- Project/Track/Clip abstraction
-- Undo/redo support with command pattern
-- Serialization to JSON
-- Version migration
+**Data Model:** Project/Track/Clip abstraction, undo/redo command pattern, JSON serialization with version migration
 
-**UI Layer:**
-- Component-based interface (JUCE)
-- Real-time waveform visualization
-- Custom widgets for DJ workflow
-- OpenGL-accelerated rendering
+**UI Layer:** Component-based JUCE interface, real-time waveform visualization, OpenGL-accelerated rendering
 
-**Controllers:**
-- Beat grid analysis and editing
-- LUFS analysis pipeline
-- Transition effects
-- Hardware integration
+</div>
 
----
+**Key Technical Features:**
 
-### Key Technical Features
-
-**Hardware Integration:**
-- Direct recording from CDJ equipment via Ethernet/USB
-- Real-time beat marker synchronization during recording
-- Multi-channel audio capture with low latency
-- MIDI controller support
-
-**Beat Grid Analysis:**
-- Integration with zplane Auftakt SDK for professional-grade beat detection
-- Sample-accurate beat marker placement
-- Tempo curve analysis for variable BPM tracks
-- Manual correction interface
-
-**LUFS Analysis:**
-- EBU R128 compliance for broadcast standards
-- Sliding window analysis for short-term loudness
-- True peak detection via oversampling
-- Multi-threaded offline analysis with progress tracking
-- Integration with streaming platform requirements
-
-**Effects Processing:**
-- Real-time DSP with parameter smoothing to prevent clicks
-- Wet/dry mixing with custom curves
-- Cross-fade switching to avoid artifacts during parameter changes
-- Preset management and sharing
-
----
-
-### Technologies Used
-
-**Core Technologies:**
-- C++17 with modern idioms (smart pointers, RAII, move semantics)
-- JUCE 7.x framework (custom fork with proprietary modifications)
-- Objective-C++ for macOS platform integration
-- Win32 API for Windows platform features
-
-**Audio Processing:**
-- zplane Auftakt (beat detection)
-- zplane Elastique (time-stretching/pitch-shifting)
-- Custom DSP algorithms for LUFS and effects
-- Multi-threaded audio processing with lock-free queues
-
-**Infrastructure:**
-- GitHub Actions CI/CD
-- Sentry (crash reporting and performance monitoring)
-- ConfigCat (feature flags)
-- Sparkle (macOS auto-updates)
-- Google Cloud Logging
-
-**Build & Deployment:**
-- Xcode 14.2 (macOS)
-- Visual Studio 2022 (Windows)
-- Projucer (JUCE project generator)
-- Apple notarization and hardened runtime
-- Windows Authenticode code signing
-- Git submodules for dependency management
+- **Hardware Integration** - Direct CDJ recording via Ethernet/USB with real-time beat marker sync
+- **Beat Grid Analysis** - Integration with zplane Auftakt SDK for professional-grade beat detection
+- **LUFS Analysis** - EBU R128 compliance for broadcast standards with multi-threaded processing
+- **Effects Processing** - Real-time DSP with parameter smoothing, wet/dry mixing, preset management
 
 ---
 
 ## Results & Impact
 
-### Reliability Improvements
+<div class="metrics-box">
+  <div class="metric">
+    <span class="metric-value">40%</span>
+    <span class="metric-label">Crash Improvement</span>
+  </div>
+  <div class="metric">
+    <span class="metric-value">6×</span>
+    <span class="metric-label">Release Velocity</span>
+  </div>
+  <div class="metric">
+    <span class="metric-value">2</span>
+    <span class="metric-label">Platforms</span>
+  </div>
+  <div class="metric">
+    <span class="metric-value">2,500</span>
+    <span class="metric-label">Daily Users</span>
+  </div>
+</div>
 
-**Crash Rate Reduction:**
-- **From 5% to 3%** (40% improvement)
-- ~2,500 daily active users affected
-- Comprehensive error tracking and monitoring
-- Graceful degradation patterns
+### Professional Recognition
 
-**Production Monitoring:**
-- Real-time crash alerts
-- Performance regression detection
-- Release health tracking
-- User impact assessment
+The application is actively used by professional DJs worldwide, with hardware deployments at major festivals:
 
----
-
-### Operational Excellence
-
-**Release Velocity:**
-- **From monthly to every 1.5 weeks** (6x improvement)
-- Faster feature iteration
-- Quicker bug fixes
-- Competitive advantage
-
-**Platform Parity:**
-- Mac and Windows feature parity
-- Unified user experience
-- Expanded addressable market
-- Simplified support
-
-**Automated Deployment:**
-- Reduced manual errors
-- Consistent release process
-- Faster time to market
-- Rollback capabilities
-
----
-
-### Market Reach
-
-**Cross-Platform Expansion:**
-- Windows support opened Windows-dominant DJ market
-- Professional DJs on both platforms
-- Festival deployments on various hardware
-
-**Professional Use Cases:**
-- Burning Man 2021, 2022, 2023
-- EDC Las Vegas
-- Professional DJ workflows
-- Broadcast-ready output
-
-**User Base:**
-- 2,500 daily active users
-- Professional DJ investors
-- Growing community
-- Festival presence
-
----
-
-### Team Growth
-
-**Hiring Process:**
-- Established technical interview framework
-- Successfully hired multiple engineers
-- Focus on audio domain knowledge
-- Cultural fit assessment
-
-**Onboarding Program:**
-- Trained generalist engineers in audio development
-- Comprehensive documentation
-- Mentorship pairing
-- Progressive complexity
-
-**Knowledge Sharing:**
-- Code review culture
-- Technical documentation
-- Team presentations
-- Cross-training
-
----
-
-## Challenges Overcome
-
-### Cross-Platform Threading
-
-**Problem:** Different threading models between macOS and Windows required careful synchronization design.
-
-**Solution:** Implemented platform-agnostic abstractions with lock-free communication patterns. Used JUCE threading primitives where possible, custom implementations where necessary.
-
----
-
-### Java/C++ Interop
-
-**Problem:** Hardware integration required launching and communicating with Java application for CDJ recording. Windows behavior differed significantly.
-
-**Solution:** Custom process management and stream handling. Platform-specific implementations with unified interface. Robust error handling and recovery.
-
----
-
-### Real-Time Performance
-
-**Problem:** Meeting <10ms latency requirements while performing complex DSP required extensive optimization.
-
-**Solution:**
-- Extensive profiling to identify bottlenecks
-- Careful memory management to avoid allocations in audio callbacks
-- SIMD optimization for critical paths
-- Lock-free communication patterns
-
----
-
-### Filter Accuracy
-
-**Problem:** Matching Pioneer hardware sound profiles required precise modeling.
-
-**Solution:**
-- Iterative measurement using professional equipment
-- Mathematical modeling of filter characteristics
-- Validation with professional DJs
-- Refinement based on user feedback
-
----
-
-### Production Debugging
-
-**Problem:** Crash reports from production environments required sophisticated infrastructure to diagnose issues in release builds.
-
-**Solution:**
-- Sentry integration with automated symbol upload
-- Structured logging with contextual information
-- Reproducible builds for debugging
-- Release health monitoring
-
----
-
-## Professional Recognition
-
-The application is actively used by professional DJs worldwide, with hardware deployments at major festivals including Burning Man and EDC. Several professional DJs are investors in the company, validating the product's value to the professional community.
-
-**Festival Deployments:**
-- Burning Man (2021, 2022, 2023)
-- EDC Las Vegas
+- **Burning Man** (2021, 2022, 2023)
+- **EDC Las Vegas**
 - Multiple regional festivals
+- Professional DJ investors validating product value
 
-**Professional Validation:**
-- Professional DJ investors
-- Used in live performances
-- Broadcast-quality output
-- Industry recognition
+---
+
+## Key Challenges Solved
+
+<div class="two-col">
+  <div class="col-box">
+    <h4>Cross-Platform Threading</h4>
+    <p><strong>Problem:</strong> Different threading models between macOS and Windows required careful synchronization design.</p>
+    <p><strong>Solution:</strong> Implemented platform-agnostic abstractions with lock-free communication patterns using JUCE primitives and custom implementations.</p>
+  </div>
+  <div class="col-box">
+    <h4>Real-Time Performance</h4>
+    <p><strong>Problem:</strong> Meeting &lt;10ms latency while performing complex DSP required extensive optimization.</p>
+    <p><strong>Solution:</strong> Profiling-driven optimization, careful memory management avoiding allocations, SIMD optimization for critical paths.</p>
+  </div>
+  <div class="col-box">
+    <h4>Java/C++ Interop</h4>
+    <p><strong>Problem:</strong> Hardware integration required launching Java application for CDJ recording with platform differences.</p>
+    <p><strong>Solution:</strong> Custom process management and stream handling with platform-specific implementations and robust error handling.</p>
+  </div>
+  <div class="col-box">
+    <h4>Filter Accuracy</h4>
+    <p><strong>Problem:</strong> Matching Pioneer hardware sound profiles required precise modeling.</p>
+    <p><strong>Solution:</strong> Iterative measurement using professional equipment, mathematical modeling, validation with professional DJs.</p>
+  </div>
+</div>
+
+---
+
+## Technologies Used
+
+**Core:** C++17, JUCE 7.x, Objective-C++, Win32 API
+**Audio:** zplane Auftakt (beat detection), zplane Elastique (time-stretch), custom DSP algorithms
+**Infrastructure:** GitHub Actions, Sentry, ConfigCat, Sparkle, Google Cloud Logging
+**Build:** Xcode 14.2, Visual Studio 2022, Projucer, Apple notarization, Windows Authenticode
 
 ---
 
