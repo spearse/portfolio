@@ -37,4 +37,4 @@ I build audio/AI tools for music creators—cross-platform DAWs, AI arrangements
 - [Density Web Platform](projects/05-Density-Web-Platform.md)
 - [Compose with Sounds](projects/03-Compose-with-Sounds.md)
 
-See [About](/about/) or the [CV](/cv/) (Nov 2025). Contact: [pearse.audio@gmail.com](mailto:pearse.audio@gmail.com) • Portfolio: [spearse.github.io/portfolio](https://spearse.github.io/portfolio/)
+See [About]({{ site.baseurl }}/about/) or the [CV]({{ site.baseurl }}/cv/) (Nov 2025). Contact: [pearse.audio@gmail.com](mailto:pearse.audio@gmail.com) • Portfolio: [spearse.github.io/portfolio](https://spearse.github.io/portfolio/)
