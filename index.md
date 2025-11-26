@@ -24,12 +24,6 @@ I build audio/AI tools for music creators—cross-platform DAWs, AI arrangements
   </div>
 </div>
 
-**Top outcomes**
-- **Density Copilot:** AI arrangement assistant; DSL + semantic search; VC demo driver.
-- **Density DAW:** Cross-platform pro DJ DAW; crash ↓40%; releases ~1.5 weeks; ~2.5k DAU.
-- **CLaMP3 Semantic Search:** Research→prod ML pipeline in <1 month; sub-100ms queries over 10K+ files.
-- **RTO/Payments Platform:** Rent-to-own/perpetual shift in ~2 months; zero production billing issues.
-
 <div class="cards" id="projects">
   <a class="card" href="{{ site.baseurl }}/projects/01-Density-Copilot.md">
     <h3>Density Copilot</h3>
@@ -67,5 +61,13 @@ I build audio/AI tools for music creators—cross-platform DAWs, AI arrangements
     </ul>
   </a>
 </div>
+
+<hr class="rule">
+
+**Top outcomes**
+- **Density Copilot:** AI arrangement assistant; DSL + semantic search; VC demo driver.
+- **Density DAW:** Cross-platform pro DJ DAW; crash ↓40%; releases ~1.5 weeks; ~2.5k DAU.
+- **CLaMP3 Semantic Search:** Research→prod ML pipeline in <1 month; sub-100ms queries over 10K+ files.
+- **RTO/Payments Platform:** Rent-to-own/perpetual shift in ~2 months; zero production billing issues.
 
 See [About]({{ site.baseurl }}/about/) or the [CV]({{ site.baseurl }}/cv/) (Nov 2025). Contact: [pearse.audio@gmail.com](mailto:pearse.audio@gmail.com) • Portfolio: [spearse.github.io/portfolio](https://spearse.github.io/portfolio/)
