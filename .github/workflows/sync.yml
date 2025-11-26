@@ -98,19 +98,7 @@ jobs:
             mv "$tmp" "$f"
           done
 
-      - name: Build index.md
-        run: |
-          python - <<'PY'
-          import os, urllib.parse
-          files = sorted([f for f in os.listdir('projects') if f.endswith('.md')])
-          with open('index.md', 'w', encoding='utf-8') as out:
-              out.write('---\nlayout: home\ntitle: Selected Projects\n---\n\n')
-              out.write("Welcome! These are curated projects across Audio, AI, and full-stack engineering.\n\n")
-              for f in files:
-                  title = os.path.splitext(f)[0].split('-', 1)[-1].replace('-', ' ')
-                  url = 'projects/' + urllib.parse.quote(f)
-                  out.write(f'- [{title}]({url})\n')
-          PY
+      # Index is manually designed; do not overwrite
 
       - name: Ensure Jekyll config exists
         run: |
