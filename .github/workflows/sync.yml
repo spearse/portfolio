@@ -67,16 +67,7 @@ jobs:
               fi
 
               mkdir -p "$(dirname "$dest_path")"
-
-              cat > "$dest_path" <<FRONTMATTER
----
-layout: default
-title: $title
-permalink: $permalink
----
-
-FRONTMATTER
-
+              printf -- '---\nlayout: default\ntitle: %s\npermalink: %s\n---\n\n' "$title" "$permalink" > "$dest_path"
               cat "$source_path" >> "$dest_path"
               echo "✅ Copied $dest"
             else
