@@ -54,3 +54,8 @@ I spent nine years in academia (PhD in music computing; Senior Lecturer) leading
 - GitHub: [github.com/spearse](https://github.com/spearse)
 - ADC 2019 talk: [YouTube](https://www.youtube.com/watch?v=kyALim8FSew)
 - SMC 2019 paper: [Research Portal](https://researchportal.port.ac.uk/en/publications/composing-with-sounds-designing-an-object-oriented-daw-for-the-te)
+
+## GitHub
+<a href="https://github.com/spearse">
+  <img src="https://ghchart.rshah.org/spearse" alt="GitHub contribution heatmap for spearse" class="gh-heatmap">
+</a>
