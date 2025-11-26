@@ -30,5 +30,5 @@ Built a semantic audio search pipeline in under a month so Copilot can find samp
 
 ## Challenges & Solutions
 - Memory limits in Docker: Sequential mode, lazy loading, aggressive cleanup.
-- Cross-modal alignment: CLaMP3 embeddings keep text/audio in one space.
+- Cross-modal alignment: CLaMP3 embeddings to keep text/audio in one space.
 - Production reliability: Idempotent checkpoints, validation, and health checks to survive bad files/ooms.
