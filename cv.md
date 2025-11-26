@@ -4,9 +4,7 @@ title: Stephen Pearse — CV (November 2025)
 permalink: /cv/
 ---
 
-# Stephen Pearse — CV (November 2025)
-
-<div class="cv-page">
+<div class="cv-page" markdown="1">
 
 # Stephen Pearse — CV (November 2025)
 
