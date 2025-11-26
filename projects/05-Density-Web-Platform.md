@@ -11,23 +11,19 @@ Role: Full-Stack Engineer (1 year; 2-month RTO build) • Context: Same company 
 ## Overview
 Partnered with the web platform team to pivot from subscriptions to perpetual and rent-to-own (RTO) licensing with hardware bundles, without breaking existing subscribers.
 
-## What I Built
-- RTO state machine (NestJS/TypeScript) handling 14-payment lifecycle, early buyout, and backward-compatible subscriptions.
-- Chargebee webhook pipeline with locking/idempotency to keep billing state and database in sync.
-- React frontend: RTO progress dashboard, hardware checkout with dynamic discounts, payment method management.
-- Discount engine covering RTO progress, promos, bundles, and price floors; tested against combinatorial edge cases.
-- Database-backed subscription locks to survive pod restarts and prevent race conditions.
+<div class="highlight-box" markdown="1">
+Built and shipped rent-to-own/perpetual licensing in ~2 months: NestJS/TypeScript state machine, Chargebee webhooks with locking/idempotency, React flows for RTO progress and hardware checkout, and a discount engine covering promos/bundles/price floors.
+</div>
 
 ## Impact
-- Delivered the RTO system in ~2 months with zero production billing issues.
-- Enabled new purchase paths ($200 one-time, $15×14 RTO) while keeping legacy subscribers intact.
-- Hardware bundling/discount logic increased flexibility and prevented revenue leakage from discount stacking.
+New purchase paths ($200 one-time, $15×14 RTO) launched with zero production billing issues; legacy subscribers remained intact; discount/bundle logic increased flexibility while preventing revenue leakage.
 
-## Technical Highlights
-- Precedence rules and minimum price floors enforced via unit/integration tests for discount combinations.
-- Webhook retries/duplicates handled safely; race-free via database locks instead of in-memory caches.
-- Deployed on GCP (Cloud Run, Secret Manager) with Postgres/TypeORM and automated QA environments.
+## How it works
+- Lifecycle: RTO state machine handling 14 payments, early buyout, and backward-compatible subscriptions.
+- Billing sync: Chargebee webhooks with database-backed locks to survive pod restarts and avoid races/duplicates.
+- Frontend: React dashboards for RTO progress, hardware checkout with dynamic discounts, payment method management.
+- Discounts: Engine covering RTO progress, promos, bundles, and price floors; unit/integration tested across combinations.
+- Infra: GCP (Cloud Run, Secret Manager), Postgres/TypeORM, automated QA environments.
 
-## Collaboration & Quality
-- Partnered with QA on scenario matrices (late payments, early buyout, promos, legacy migrations).
-- Documented flows for support/finance and ensured auditability across billing events.
+## Collaboration
+Partnered with QA on scenario matrices (late payments, early buyout, promos, legacy migrations) and documented flows for support/finance with full auditability across billing events.

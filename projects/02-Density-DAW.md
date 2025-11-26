@@ -9,27 +9,20 @@ permalink: /projects/02-Density-DAW.html
 Role: Software Engineer → Technical Lead (3 years) • Scale: ~2,500 DAU • Users: Pro DJs (Burning Man, EDC)
 
 ## Overview
-Joined the team to evolve a DJ-focused DAW that pairs live performance workflows with pro-grade audio processing. Led the shift to Windows alongside macOS, tightened reliability, and sped up delivery for a fast-moving DJ market.
+Joined to evolve a DJ-focused DAW that pairs live performance workflows with pro-grade audio processing. Led the shift to Windows alongside macOS, tightened reliability, and sped up delivery.
 
-## What Changed
-- Cross-platform port: Reworked threading/interop to bring the macOS codebase to Windows while keeping one code line.
-- Real-time engine: Lock-free audio/UI messaging and preallocated buffers to keep sub-10ms latency under load.
-- DSP/effects: LUFS metering (BS.1770-4), Pioneer-style filter modeling, fractional delay and multi-band limiting with artifact-free switching.
-- Reliability & rollout: Sentry + structured logging, feature-flagged releases, graceful degradation patterns.
-- CI/CD: GitHub Actions pipelines for Mac/Windows, signing/notarization, universal binaries, Windows installer, semantic versioning.
+<div class="highlight-box" markdown="1">
+Built a unified Mac/Windows codebase, reworked threading/interop, and delivered a real-time engine that holds sub-10ms latency under load. Added LUFS metering and pro-grade effects, production observability, and CI/CD with signing/notarization and Windows installers.
+</div>
 
 ## Impact
-- Crash rate down 40% (5% → 3%) after observability + rollout controls.
-- Release cadence improved from monthly to ~1.5 weeks.
-- Windows launch expanded addressable market and achieved platform parity.
-- Supported ~2,500 daily active DJs in production environments.
+Crash rate down 40% (5% → 3%); releases from monthly to ~1.5 weeks; Windows launch achieved platform parity and supported ~2,500 daily DJs.
 
-## Technical Highlights
-- Lock-free queues and dedicated thread pools for real-time audio paths.
-- zplane SDK integration for beat detection/time-stretch; custom LUFS/true-peak analysis.
-- ConfigCat feature flags enabling staged rollouts and A/B tests.
-- Automated signing/notarization (macOS) and code-signed Windows installers in CI.
+## How it works
+- Real-time: Lock-free audio/UI messaging, preallocated buffers, dedicated thread pools.
+- DSP/effects: BS.1770-4 LUFS, Pioneer-style filters, fractional delay, multi-band limiting with artifact-free switching.
+- Reliability & rollout: Sentry + structured logging, feature flags, graceful degradation.
+- Delivery: GitHub Actions for Mac/Windows, universal binaries, signing/notarization, Windows installer, semantic versioning.
 
 ## Leadership
-- Grew from contributor to lead for the cross-platform port and audio/DSP architecture; set patterns to avoid platform-specific forks.
-- Built onboarding/interview loops for audio engineers and mentored the team through the cross-platform launch.
+Grew from contributor to lead for the cross-platform port and audio/DSP architecture; set patterns to avoid platform-specific forks; built onboarding/interview loops and mentored the team through the launch.
