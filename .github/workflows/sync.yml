@@ -21,8 +21,8 @@ jobs:
       - name: Checkout private repo (read-only)
         uses: actions/checkout@v4
         with:
-          repository: spearse/projectsummaries   # <-- your PRIVATE repo name
-          token: ${{ secrets.PRIVATE_REPO_PAT }} # <-- fine-grained PAT secret on public repo
+          repository: spearse/projectsummaries
+          token: ${{ secrets.PRIVATE_REPO_PAT }}
           path: private_src
           ref: main
           submodules: false
@@ -31,9 +31,7 @@ jobs:
       - name: Prepare folders
         run: |
           mkdir -p projects
-          # DISABLED: rm -rf projects/*
-          # Project files are now manually maintained with full Jekyll front matter
-          echo "Project files are manually maintained"
+          echo "Project files are manually maintained with full Jekyll front matter"
 
       - name: Set up Python for transformation
         uses: actions/setup-python@v4
@@ -42,7 +40,7 @@ jobs:
 
       - name: Copy and transform project summaries from portfolio-web
         run: |
-          # File mappings: source (in projectSummaries/portfolio-web) -> destination (in portfolio/projects)
+          # File mappings: source (in projectSummaries/portfolio-web) -> destination (in portfolio)
           declare -A mappings=(
             ["density-copilot.md"]="projects/01-Density-Copilot.md"
             ["density-daw.md"]="projects/02-Density-DAW.md"
@@ -52,9 +50,6 @@ jobs:
             ["cv.md"]="cv.md"
           )
 
-          # NOTE: All mapped files above should exist in projectSummaries/portfolio-web;
-          # files without source remain manually maintained
-
           for source in "${!mappings[@]}"; do
             dest="${mappings[$source]}"
             source_path="private_src/portfolio-web/$source"
@@ -63,8 +58,7 @@ jobs:
             if [ -f "$source_path" ]; then
               echo "Processing $source -> $dest"
 
-              # Extract title from first heading
-              title=$(head -n 1 "$source_path" | sed 's/^# //' | sed 's/ - .*//')
+              title=$(head -n 1 "$source_path" | sed 's/^# //')
               slug=$(basename "$dest" .md)
               if [[ "$dest" == projects/* ]]; then
                 permalink="/${dest%.md}.html"
@@ -74,7 +68,6 @@ jobs:
 
               mkdir -p "$(dirname "$dest_path")"
 
-              # Create file with front matter
               cat > "$dest_path" <<FRONTMATTER
 ---
 layout: default
@@ -82,11 +75,9 @@ title: $title
 permalink: $permalink
 ---
 
-          FRONTMATTER
+FRONTMATTER
 
-              # Append content
               cat "$source_path" >> "$dest_path"
-
               echo "✅ Copied $dest"
             else
               echo "⚠️  Source file not found: $source_path"
@@ -94,13 +85,12 @@ permalink: $permalink
           done
 
           echo ""
-          echo "⚠️  NOTE: Visual formatting needs to be applied manually or via Claude Code"
+          echo "⚠️  NOTE: Visual formatting may need manual touch-up"
           echo "Reference template: projects/02-Density-DAW.md"
-          
+
       - name: Ensure front-matter on project pages
         run: |
           for f in projects/*.md; do
-            # If file already has front matter, skip
             if [ "$(head -n1 "$f")" = "---" ]; then
               continue
             fi
@@ -110,7 +100,7 @@ permalink: $permalink
               echo '---'
               echo 'layout: page'
               echo "title: ${title}"
-              echo 'permalink: /projects/'"$(basename "$f" .md)"'/'   # pretty URL
+              echo 'permalink: /projects/'"$(basename "$f" .md)"'/'
               echo '---'
               cat "$f"
             } > "$tmp"
@@ -148,15 +138,7 @@ permalink: $permalink
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Sync approved summaries from private repo
-
-          ⚠️  Visual formatting pending - needs manual application
-          Reference template: projects/02-Density-DAW.md
-
-          Use Claude Code to apply visual enhancements:
-          - Highlight boxes with key achievements
-          - Metrics showcasing impact
-          - Two-column layouts for scannability"
+            git commit -m "Sync approved summaries from private repo"
             git push
           else
             echo "No changes to commit."
