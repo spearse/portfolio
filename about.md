@@ -5,10 +5,7 @@ permalink: /about/
 ---
 
 # About Me
-
-I'm **Stephen Pearse**, a music computing researcher and production systems engineer with **PhD + 13 years professional experience** bridging academic research and industry. I build tools for music creators—from EU-funded educational software deployed across Europe to AI systems driving venture capital investment.
-
-My career arc spans **9 years in academia** (Senior Lecturer, research group leader, program director) and **4 years in industry** (engineer → tech lead → AI design lead), giving me a unique perspective combining deep domain expertise with production engineering.
+I'm Stephen Pearse — audio/AI engineer and former academic who builds tools for music creators. I’ve led cross-platform DAWs, AI arrangement systems, and payment platforms, pairing real-time audio chops with production engineering.
 
 <div class="metrics-box">
   <div class="metric">
@@ -31,163 +28,33 @@ My career arc spans **9 years in academia** (Senior Lecturer, research group lea
 
 ---
 
-## Career Journey
+## Career Snapshot
 
-<div class="highlight-box" markdown="1">
+### Current Focus (Density)
+- **AI music systems:** Lead/architect for Copilot (LLM-driven arrangements), semantic audio search (MERT→CLaMP3), multi-DAW integrations.
+- **Pro DJ DAW:** Tech lead for cross-platform Mac/Windows app; crash rate down 40%, releases from monthly to ~1.5 weeks.
+- **Web platform:** Full-stack RTO/payments (NestJS/React/Chargebee) delivered in ~2 months with zero billing issues.
 
-### 🎓 Academic Foundation (2011-2020)
-
-After completing my **PhD in music computing** focused on agentic tools for experimental music composition, I spent 9 years as **Senior Lecturer at the University of Portsmouth**.
-
-**Key Responsibilities:**
-- Led the music computing research group
-- Directed the MSc Music & Sound Technology program
-- Secured EU Commission funding for educational technology
-- Built Compose with Sounds v2 as sole developer over 7 years
-
-**Compose with Sounds** was a pedagogical digital audio workstation enabling students to compose with sound objects. Built in C++ with Qt framework, it featured custom audio engine, 3D visualizations, 10 language translations, and cross-platform support. Deployed across European schools with comprehensive curriculum materials.
-
-📺 [Watch my ADC 2019 talk](https://www.youtube.com/watch?v=kyALim8FSew)
-
-</div>
-
-<div class="highlight-box" markdown="1">
-
-### 🚀 Industry Transition (2020-2021)
-
-After 9 years building educational tools, I wanted to create systems for professional artists. I joined **Density** as a software engineer working on their professional DJ/DAW application.
-
-**Key Learnings:**
-- Production engineering vs. academic prototypes (reliability, scale, user support)
-- Commercial software development (CI/CD, monitoring, crash tracking)
-- Team collaboration and fast iteration cycles
-- Business context (revenue, users, market fit, product roadmap)
-
-</div>
-
-<div class="highlight-box" markdown="1">
-
-### 👨‍💼 Technical Leadership (2021-2023)
-
-**Promoted to Tech Lead** after 1.5 years based on technical contributions and cross-platform expertise.
-
-**Major Achievements:**
-- **Cross-platform transformation** - Led Mac-only → Windows+Mac migration
-- **Reliability improvements** - Reduced crash rate 40% (5% → 3%)
-- **Release velocity** - Accelerated releases 6× faster (monthly → every 1.5 weeks)
-- **Real-time audio** - Implemented <10ms latency processing with lock-free queues
-- **Professional DSP** - ITU-R BS.1770-4 LUFS metering, filter modeling, effects processing
-- **Hardware integration** - CDJ equipment recording via custom Java/C++ interop
-- **Team building** - Lead technical interviewer, developed onboarding program
-
-**Scale:** Supporting **2,500 daily active users** at major festivals including **Burning Man** and **EDC Las Vegas**.
-
-</div>
-
-<div class="highlight-box" markdown="1">
-
-### 🤖 AI/ML Systems (2023-Present)
-
-As Density invested in LLM-powered music production tools, I pivoted to lead **Copilot**, an AI music production assistant generating professional arrangements from natural language.
-
-**Design Leadership:**
-- Architected complete system (PyQt5 desktop app integrating Google Gemini LLM)
-- Designed custom DSL (DensityMark) bridging LLMs and musical structure with streaming parser
-- Built semantic audio search in <1 month (MERT→Clamp3 embeddings, FAISS vector search)
-- Multi-DAW integration (Socket-based IPC with Ableton Live, extensible to Density DAW)
-- Coordinated cross-functional teams (Backend engineers, ML engineers, product team)
-- 100+ comprehensive tests (Unit, integration, and regression coverage)
-
-**Business Impact:**
-- Shipped to multiple VCs driving "heavy investment" interest
-- Professional DJ validation in real-world production workflows
-- Cited as key differentiator for fundraising
-
-</div>
+### Academic Foundation (2011–2020)
+- PhD in music computing; 9 years as Senior Lecturer (research group lead, MSc program director).
+- Built **Compose with Sounds** (EU-funded pedagogical DAW) solo over 7 years: custom C++/Qt engine, 10 languages, Mac/Win/Linux, deployed in European schools.
+- Talks/papers: ADC 2019, SMC 2019.
 
 ---
 
-## Technical Expertise
+## Technical Range
 
-<div class="two-col">
-  <div class="col-box" markdown="1">
-
-### 🎵 Audio & DSP (11+ years)
-- **C++17 with JUCE** - Professional-grade real-time audio engines
-- **Real-time constraints** - <10ms latency, lock-free communication
-- **DSP algorithms** - LUFS/EBU R128, filters, effects, SIMD optimization
-- **Cross-platform** - Mac (Universal Binaries), Windows, Linux
-- **Hardware integration** - CDJ equipment, pro audio interfaces, MIDI
-- **Custom audio engines** - Built from scratch for specific workflows
-
-  </div>
-  <div class="col-box" markdown="1">
-
-### 🧠 AI/ML Systems (Recent)
-- **LLM integration** - Google Vertex AI (Gemini), streaming responses
-- **Audio embeddings** - MERT, Clamp3 (multimodal audio+text)
-- **Semantic search** - FAISS vector indexes, sub-second search
-- **Custom DSL design** - DensityMark for musical representation
-- **ML infrastructure** - PyTorch, Transformers, Docker, CPU optimization
-
-  </div>
-  <div class="col-box" markdown="1">
-
-### 💻 Full-Stack Development
-- **Desktop applications** - PyQt5, Qt Framework, multi-threaded
-- **Backend** - NestJS, TypeScript, RESTful APIs, webhooks
-- **Frontend** - React, Material-UI, Redux, responsive design
-- **Databases** - PostgreSQL with TypeORM, complex state machines
-- **Payment systems** - Chargebee integration, rent-to-own logic
-
-  </div>
-  <div class="col-box" markdown="1">
-
-### 🔧 Production Engineering
-- **CI/CD** - GitHub Actions, automated builds, code signing
-- **Monitoring** - Sentry crash tracking, structured logging
-- **Feature management** - ConfigCat flags, A/B testing, gradual rollouts
-- **Deployment** - Google Cloud Run, Docker, Kubernetes
-- **Leadership** - 11+ years technical leadership, hiring, mentorship
-
-  </div>
-</div>
+- **Audio/DSP:** C++/JUCE, <10ms real-time pipelines, LUFS/filters/effects, hardware integration (CDJ), cross-platform delivery.
+- **AI/ML systems:** LLM integration (Vertex/Gemini), semantic search (MERT, CLaMP3, FAISS), streaming parsers/DSLs for music structure.
+- **Full-stack & infra:** PyQt/Qt desktop; NestJS/React/TypeORM; Chargebee/webhooks; CI/CD with signing/notarization; GCP/Docker; feature flags/observability.
+- **Leadership:** Tech lead, interviewer, onboarding/design patterns; cross-functional coordination with ML/backend/product.
 
 ---
 
-## Contact & Links
+## Links
+- LinkedIn: [stephen-pearse-1870b050](https://www.linkedin.com/in/stephen-pearse-1870b050/)
+- GitHub: [github.com/spearse](https://github.com/spearse)
+- ADC 2019 talk: [YouTube](https://www.youtube.com/watch?v=kyALim8FSew)
+- SMC 2019 paper: [Research Portal](https://researchportal.port.ac.uk/en/publications/composing-with-sounds-designing-an-object-oriented-daw-for-the-te)
 
-<div class="two-col">
-  <div class="col-box" markdown="1">
-
-### 🔗 Professional
-- **LinkedIn:** [stephen-pearse-1870b050](https://www.linkedin.com/in/stephen-pearse-1870b050/)
-- **GitHub:** [github.com/spearse](https://github.com/spearse)
-
-  </div>
-  <div class="col-box" markdown="1">
-
-### 📚 Research & Talks
-- **ResearchGate:** [Stephen-Pearse](https://www.researchgate.net/profile/Stephen-Pearse)
-- **ADC 2019 Talk:** [YouTube](https://www.youtube.com/watch?v=kyALim8FSew)
-
-  </div>
-</div>
-
-**Preferred locations:** UK-based, EU remote, or US remote opportunities considered for exceptional fit.
-
-Feel free to reach out if you'd like to discuss music technology, AI systems for creative applications, or potential collaborations.
-
----
-
-## Recent Projects
-
-For detailed technical write-ups of my work, see:
-
-- [Density Copilot](projects/01-Density-Copilot.html) - AI music production assistant driving VC investment
-- [Density DAW](projects/02-Density-DAW.html) - Professional DJ software (tech lead, 3 years)
-- [Compose with Sounds](projects/03-Compose-with-Sounds.html) - EU-funded educational DAW (sole developer, 7 years)
-- [CLaMP3 Audio Semantic Search](projects/04-CLaMP3-Audio-Semantic-Search.html) - ML pipeline built in <1 month
-- [Density Web Platform](projects/05-Density-Web-Platform.html) - Full-stack RTO payment system
-
-Each project demonstrates different aspects of my technical range while maintaining consistent focus on building tools for music creators.
+Preferred: UK-based or EU-remote; US remote for strong fit. I like building audio/AI tools that ship and scale—happy to talk if that’s what you need.

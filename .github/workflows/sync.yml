@@ -46,11 +46,13 @@ jobs:
           declare -A mappings=(
             ["density-copilot.md"]="01-Density-Copilot.md"
             ["density-daw.md"]="02-Density-DAW.md"
+            ["compose-with-sounds.md"]="03-Compose-with-Sounds.md"
+            ["clamp3-semantic-search.md"]="04-CLaMP3-Audio-Semantic-Search.md"
             ["density-fullstack.md"]="05-Density-Web-Platform.md"
           )
 
-          # NOTE: Files 03-Compose-with-Sounds.md and 04-CLaMP3-Audio-Semantic-Search.md
-          # are not yet in projectSummaries/portfolio-web, so they remain manually maintained
+          # NOTE: All mapped files above should exist in projectSummaries/portfolio-web;
+          # files without source remain manually maintained
 
           for source in "${!mappings[@]}"; do
             dest="${mappings[$source]}"
