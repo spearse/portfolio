@@ -6,13 +6,20 @@ permalink: /cv/
 
 # Stephen Pearse — CV (November 2025)
 
+<div class="cv-page">
+
+# Stephen Pearse — CV (November 2025)
+
 ## Profile
 Audio/AI engineer and former academic with 13+ years building tools for music creators. Led cross-platform DAWs, AI arrangement systems, semantic audio search, and payments platforms. Comfortable owning architecture, delivery, and team patterns from research prototypes through production releases.
 
 ## Core Skills
 - **Audio/DSP:** C++/JUCE, Qt/PyQt, <10ms real-time pipelines, LUFS/EBU R128, filters/effects, hardware integration (CDJ/ASIO/CoreAudio), cross-platform delivery.
+  - Real-time patterns and optimization for pro audio UX.
 - **AI/ML systems:** LLM integration (Vertex/Gemini), semantic search (MERT, CLaMP3, FAISS), streaming parsers/DSLs for musical structure, PyTorch/Transformers.
+  - Streaming/embedding pipelines and semantic alignment for production use.
 - **Full-stack/infra:** TypeScript (NestJS, React, TypeORM), Python/FastAPI, Chargebee/webhooks, CI/CD (GitHub Actions, signing/notarization, Windows installers), Docker/GCP, feature flags/observability (ConfigCat, Sentry).
+  - Delivery, rollout control, and operational hygiene for product teams.
 - **Leadership:** Tech lead, interviewer, onboarding/patterns, cross-functional collaboration with ML/backend/product, rapid delivery under tight timelines.
 
 ## Experience
@@ -54,3 +61,5 @@ Led music computing research group and MSc program; taught C++ audio development
 - GitHub: https://github.com/spearse
 - ADC 2019 talk: https://www.youtube.com/watch?v=kyALim8FSew
 - SMC paper: https://researchportal.port.ac.uk/en/publications/composing-with-sounds-designing-an-object-oriented-daw-for-the-te
+
+</div>

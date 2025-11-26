@@ -6,6 +6,8 @@ permalink: /cv-clean/
 
 # Stephen Pearse — CV (November 2025)
 
+<div class="cv-page">
+
 ## Profile
 Audio/AI engineer and former academic with 13+ years building tools for music creators. Led cross-platform DAWs, AI arrangement systems, semantic audio search, and payments platforms. Comfortable owning architecture, delivery, and team patterns from research prototypes through production releases.
 
@@ -41,3 +43,5 @@ LinkedIn: [stephen-pearse-1870b050](https://www.linkedin.com/in/stephen-pearse-1
 GitHub: [github.com/spearse](https://github.com/spearse)  
 ADC 2019 talk: [YouTube](https://www.youtube.com/watch?v=kyALim8FSew)  
 SMC paper: [Research Portal](https://researchportal.port.ac.uk/en/publications/composing-with-sounds-designing-an-object-oriented-daw-for-the-te)
+
+</div>

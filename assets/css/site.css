@@ -414,3 +414,11 @@ main{padding:1.2rem 0 2rem}
   .page-content pre{padding:1rem; font-size:.85rem}
   .page-content ul, .page-content ol{padding-left:1.3rem}
 }
+
+/* CV-specific spacing */
+.cv-page h1{margin-bottom:1rem}
+.cv-page h2{margin-top:2.4rem; margin-bottom:1rem}
+.cv-page h3{margin-top:1.8rem; margin-bottom:.8rem}
+.cv-page p{margin-bottom:1.4rem; line-height:1.75}
+.cv-page ul, .cv-page ol{padding-left:2rem; margin-bottom:1.6rem}
+.cv-page li{margin-bottom:1rem; line-height:1.7}

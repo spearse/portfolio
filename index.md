@@ -70,4 +70,4 @@ I build audio/AI tools for music creators—cross-platform DAWs, AI arrangements
 - **CLaMP3 Semantic Search:** Research→prod ML pipeline in <1 month; sub-100ms queries over 10K+ files.
 - **RTO/Payments Platform:** Rent-to-own/perpetual shift in ~2 months; zero production billing issues.
 
-See [About]({{ site.baseurl }}/about/) or the [CV]({{ site.baseurl }}/cv/) (Nov 2025) and [Narrative CV]({{ site.baseurl }}/cv-clean/). Contact: [pearse.audio@gmail.com](mailto:pearse.audio@gmail.com) • Portfolio: [spearse.github.io/portfolio](https://spearse.github.io/portfolio/)
+See [About]({{ site.baseurl }}/about/) or the [Condensed CV]({{ site.baseurl }}/cv/) (Nov 2025) and [Narrative CV]({{ site.baseurl }}/cv-clean/). Contact: [pearse.audio@gmail.com](mailto:pearse.audio@gmail.com) • Portfolio: [spearse.github.io/portfolio](https://spearse.github.io/portfolio/)
