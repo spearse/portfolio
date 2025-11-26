@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Density DAW
+title: Density DAW - Professional DJ Software
 permalink: /projects/02-Density-DAW.html
 ---
 

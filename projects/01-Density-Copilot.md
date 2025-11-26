@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Density Copilot
+title: Density Copilot - AI Music Production Assistant
 permalink: /projects/01-Density-Copilot.html
 ---
 

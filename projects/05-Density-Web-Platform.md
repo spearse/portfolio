@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Density Web Platform
+title: Density Web Platform - Business Model Transformation
 permalink: /projects/05-Density-Web-Platform.html
 ---
 

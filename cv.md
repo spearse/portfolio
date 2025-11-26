@@ -1,6 +1,6 @@
 ---
 layout: default
-title: CV — Stephen Pearse (November 2025)
+title: Stephen Pearse — CV (November 2025)
 permalink: /cv/
 ---
 
@@ -48,9 +48,9 @@ Led music computing research group and MSc program; taught C++ audio development
 - “An Agent-Based Approach to Interaction and Composition” — ICMC, 2014.
 
 ## Contact
-- Email: [pearse.audio@gmail.com](mailto:pearse.audio@gmail.com)
-- Portfolio: [spearse.github.io/portfolio](https://spearse.github.io/portfolio/)
-- LinkedIn: [stephen-pearse-1870b050](https://www.linkedin.com/in/stephen-pearse-1870b050/)
-- GitHub: [github.com/spearse](https://github.com/spearse)
-- ADC 2019 talk: [YouTube](https://www.youtube.com/watch?v=kyALim8FSew)
-- SMC paper: [Research Portal](https://researchportal.port.ac.uk/en/publications/composing-with-sounds-designing-an-object-oriented-daw-for-the-te)
+- Email: pearse.audio@gmail.com
+- Portfolio: https://spearse.github.io/portfolio/
+- LinkedIn: https://www.linkedin.com/in/stephen-pearse-1870b050/
+- GitHub: https://github.com/spearse
+- ADC 2019 talk: https://www.youtube.com/watch?v=kyALim8FSew
+- SMC paper: https://researchportal.port.ac.uk/en/publications/composing-with-sounds-designing-an-object-oriented-daw-for-the-te
