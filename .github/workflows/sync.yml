@@ -44,11 +44,12 @@ jobs:
         run: |
           # File mappings: source (in projectSummaries/portfolio-web) -> destination (in portfolio/projects)
           declare -A mappings=(
-            ["density-copilot.md"]="01-Density-Copilot.md"
-            ["density-daw.md"]="02-Density-DAW.md"
-            ["compose-with-sounds.md"]="03-Compose-with-Sounds.md"
-            ["clamp3-semantic-search.md"]="04-CLaMP3-Audio-Semantic-Search.md"
-            ["density-fullstack.md"]="05-Density-Web-Platform.md"
+            ["density-copilot.md"]="projects/01-Density-Copilot.md"
+            ["density-daw.md"]="projects/02-Density-DAW.md"
+            ["compose-with-sounds.md"]="projects/03-Compose-with-Sounds.md"
+            ["clamp3-semantic-search.md"]="projects/04-CLaMP3-Audio-Semantic-Search.md"
+            ["density-fullstack.md"]="projects/05-Density-Web-Platform.md"
+            ["cv.md"]="cv.md"
           )
 
           # NOTE: All mapped files above should exist in projectSummaries/portfolio-web;
@@ -57,22 +58,29 @@ jobs:
           for source in "${!mappings[@]}"; do
             dest="${mappings[$source]}"
             source_path="private_src/portfolio-web/$source"
-            dest_path="projects/$dest"
+            dest_path="$dest"
 
             if [ -f "$source_path" ]; then
               echo "Processing $source -> $dest"
 
-              # Extract title and number
+              # Extract title from first heading
               title=$(head -n 1 "$source_path" | sed 's/^# //' | sed 's/ - .*//')
-              number=$(echo "$dest" | grep -oE '^[0-9]+')
+              slug=$(basename "$dest" .md)
+              if [[ "$dest" == projects/* ]]; then
+                permalink="/${dest%.md}.html"
+              else
+                permalink="/${slug}/"
+              fi
+
+              mkdir -p "$(dirname "$dest_path")"
 
               # Create file with front matter
               cat > "$dest_path" <<FRONTMATTER
-          ---
-          layout: default
-          title: $title
-          permalink: /projects/${dest%.md}.html
-          ---
+---
+layout: default
+title: $title
+permalink: $permalink
+---
 
           FRONTMATTER
 

@@ -52,6 +52,8 @@ I'm Stephen Pearse — audio/AI engineer and former academic who builds tools fo
 ---
 
 ## Links
+- Email: [pearse.audio@gmail.com](mailto:pearse.audio@gmail.com)
+- Portfolio: [spearse.github.io/portfolio](https://spearse.github.io/portfolio/)
 - LinkedIn: [stephen-pearse-1870b050](https://www.linkedin.com/in/stephen-pearse-1870b050/)
 - GitHub: [github.com/spearse](https://github.com/spearse)
 - ADC 2019 talk: [YouTube](https://www.youtube.com/watch?v=kyALim8FSew)
