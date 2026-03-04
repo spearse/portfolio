@@ -1,29 +1,30 @@
 ---
 layout: default
-title: Density Copilot - AI Music Production Assistant
+title: Density Copilot - AI Voice Assistant for Music Production
 permalink: /projects/01-Density-Copilot.html
 ---
 
-# Density Copilot - AI Music Production Assistant
+# Density Copilot - AI Voice Assistant for Music Production
 
-Role: Lead Software Engineer / Design Lead (11 months, ongoing) • Scope: Natural-language to pro DJ arrangements; shipped VC demos; testing with pro DJs
+Role: Lead Software Engineer (ongoing) • Scope: Voice-driven AI music production; sole owner of voice assistant frontend; heavy contribution to LangGraph multi-agent backend
 
 ## Overview
-Joined to create an AI assistant that turns plain-English briefs into DJ-ready arrangements. Led architecture, language design, and integrations that made Copilot the centerpiece of fundraising demos and early pro-DJ testing.
+Built the complete voice assistant and contributed heavily to the LangGraph multi-agent backend powering Density Copilot — an AI assistant that lets producers speak a brief in plain English and receive a professional DJ-ready arrangement, complete with palette curation, effects, and intelligent sample search.
 
-<div class="highlight-box" markdown="1">
-Built a PyQt desktop app with streaming LLM responses and a custom DensityMark DSL so arrangements stay musically structured while generating. Added semantic audio search (MERT→CLaMP3, FAISS) in under a month, multi-DAW integration, and resilient connections for pro DJs.
+<div class=”highlight-box” markdown=”1”>
+Sole architect and implementer of the Electron + React 19 + TypeScript voice interface, integrating ElevenLabs Conversational AI for real-time speech-to-speech interaction, a LangGraph SDK streaming connection to the agent backend, and a Three.js 3D orb visualisation. On the backend, contributed significantly to the LangGraph multi-agent pipeline — a graph of specialised subagents that detect genre, route intent, generate and modify sample palettes, arrange tracks with DensityMark, and apply effects — deployed on LangGraph Platform.
 </div>
 
 ## Impact
-Demos cited by VCs as the key differentiator; pro DJs report trusted arrangement quality with no “dead air” during generation; semantic search indexes tens of thousands of samples delivered from zero to production-ready in under a month.
+Demos cited by VCs as the key differentiator; pro DJs report trusted arrangement quality with zero friction; voice interface lets producers express ideas naturally without touching a keyboard. System now ships with a cloud-deployed LangGraph backend handling full track generation end-to-end.
 
 ## How it works
-- Desktop app: Streaming LLM UX with live arrangement visualizer and robust DAW connections.
-- Language/structure: DensityMark DSL with streaming parser/validator to keep output musically valid and recoverable mid-stream.
-- Search: MERT + CLaMP3 embeddings with FAISS (local) and Matching Engine (cloud) for text/audio/hybrid queries.
-- DAW integration: Socket protocol + Remote Script for Ableton; strategy extends to Density DAW.
-- Palette curation: LLM + semantic search replacing fixed genre templates with context-aware instruments.
+- **Voice layer:** ElevenLabs Conversational AI (speech-to-speech) with a custom interrupt system so the agent can notify users mid-generation without losing context.
+- **Frontend:** Electron 28 + React 19 + TypeScript + Vite; custom hooks (useVoiceAgent, useLangGraph, useTCP) decouple voice, agent streaming, and DAW communication.
+- **Visualisation:** Three.js + React Three Fiber 3D orb animates in sync with agent state (idle / listening / processing / speaking).
+- **Agent backend:** LangGraph multi-agent graph (router → palette → arrange → effects) deployed on LangGraph Platform with staging and production environments; genre detection, intent routing, and graceful mid-flow interrupts.
+- **DAW integration:** Length-prefix TCP socket + Python Remote Script connects to Ableton Live; DensityMark DSL with streaming parser/validator keeps arrangements musically valid.
+- **Sample search:** Google Discovery Engine (Vertex AI Search) for context-aware semantic sample curation.
 
-## Leadership
-Drove architecture across app, DSL, and search; aligned backend and ML teams on contracts and prompts; established testing and docs to keep iteration safe under tight timelines.
+## Ownership & Contribution
+Complete ownership of the voice assistant (Electron/React/ElevenLabs/LangGraph SDK integration, 3D UI, interrupt system, audio analysis client). Heavy contribution to the LangGraph agent — intent routing graph, subagent state design, palette modification flow, effects pipeline, and interrupt protocol.
