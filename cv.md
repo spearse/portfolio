@@ -11,7 +11,7 @@ Audio/AI engineer and former academic with 13+ years building tools for music cr
 
 ## Core Skills
 - **Audio/DSP:** C++/JUCE, Qt/PyQt, <10ms real-time pipelines, LUFS/EBU R128, filters/effects, hardware integration (CDJ/ASIO/CoreAudio), cross-platform delivery.
-- **AI/ML systems:** LLM integration (Vertex/Gemini), semantic search (MERT, CLaMP3, FAISS), streaming parsers/DSLs for musical structure, PyTorch/Transformers.
+- **AI/ML systems:** Multi-agent AI (LangGraph), voice AI (ElevenLabs Conversational AI), LLM integration (Vertex/Gemini), cloud AI deployment (LangGraph Platform, Google Discovery Engine), semantic search (MERT, CLaMP3, FAISS), streaming parsers/DSLs for musical structure, PyTorch/Transformers.
 - **Full-stack/infra:** TypeScript (NestJS, React, TypeORM), Python/FastAPI, Chargebee/webhooks, CI/CD (GitHub Actions, signing/notarization, Windows installers), Docker/GCP, feature flags/observability (ConfigCat, Sentry).
 - **Leadership:** Tech lead, interviewer, onboarding/patterns, cross-functional collaboration with ML/backend/product, rapid delivery under tight timelines.
 
@@ -19,7 +19,7 @@ Audio/AI engineer and former academic with 13+ years building tools for music cr
 **Density (Audio/AI tools)** — Lead Software Engineer / Tech Lead / AI Design Lead (2021–Present)  
 - **Cross-platform DAW:** Led Mac-only → Mac/Windows port; reworked threading/interop; built Windows CI/CD; universal binaries/signing; crash rate down 40% (5%→3%); release cadence from monthly to ~1.5 weeks; supported ~2,500 DAU.  
 - **Real-time audio/DSP:** Lock-free messaging, preallocated buffers, LUFS metering (BS.1770-4), filter modeling, fractional delay/multi-band limiting, hardware recording from CDJs.  
-- **AI Copilot:** Architected LLM-driven arrangement assistant (PyQt desktop, DensityMark DSL with streaming parser, resilient DAW connections); delivered semantic search pipeline (MERT→CLaMP3, FAISS) in <1 month; VC demo driver; pro DJ testers.  
+- **AI Copilot (voice assistant):** Sole owner of Electron + React 19 + TypeScript voice interface (ElevenLabs speech-to-speech, Three.js 3D orb, custom interrupt system); heavy contributor to LangGraph multi-agent backend (intent routing, palette curation via Google Discovery Engine, DensityMark arrangement agent, effects pipeline) deployed on LangGraph Platform; VC demo driver; pro DJ testers.  
 - **CLaMP3 semantic search:** Sub-100ms text/audio/hybrid search over 10K+ files; dual deployment (local vs. GCP GPU) with 15–30× speedup via batching/model reuse.  
 - **Web platform/payments:** Built rent-to-own/perpetual payments (NestJS/React/Chargebee) in ~2 months; backward-compatible with legacy subs; zero production billing issues; discount engine with precedence rules and price floors.  
 - **Team:** Interviewer/onboarding; established patterns for cross-platform code, rollout controls, and testing across desktop and services.
@@ -31,7 +31,7 @@ Contracted by Density for DSP architecture, real-time audio processing, and soft
 Led music computing research group and MSc program; taught C++ audio development and spatial audio; supervised PhDs. Built EU-funded **Compose with Sounds** pedagogical DAW (solo dev, 7 years): custom C++/Qt engine, 10 languages, Mac/Win/Linux deployment in European schools; ADC 2019 talk and SMC 2019 paper.
 
 ## Selected Projects
-- **Density Copilot:** AI music arrangement assistant; DSL + streaming parser; semantic search; multi-DAW integration; key fundraising differentiator.  
+- **Density Copilot:** AI voice assistant for music production; sole owner of Electron/React/ElevenLabs frontend; heavy contributor to LangGraph multi-agent backend; DensityMark DSL + streaming parser; Ableton Live integration; key fundraising differentiator.
 - **Density DAW:** Pro DJ DAW; cross-platform port; reliability/observability; real-time DSP; hardware integration; ~2,500 DAU.  
 - **CLaMP3 Audio Semantic Search:** Research-to-prod ML pipeline in <1 month; MERT→CLaMP3 embeddings; FAISS; dual deployment; sub-100ms queries.  
 - **Density Web Platform (RTO/Payments):** Full-stack licensing shift (one-time and $15×14 rent-to-own); Chargebee webhooks with locking; React flows; zero billing incidents.  
