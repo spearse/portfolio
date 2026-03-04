@@ -38,9 +38,9 @@ Delivered Electron + React 19 voice UI with ElevenLabs speech-to-speech, Three.j
 - Voice: ElevenLabs Conversational AI (speech-to-speech) with custom interrupt protocol for mid-generation updates.
 - Frontend: Electron + React 19 + TypeScript; custom hooks (useVoiceAgent, useLangGraph, useTCP) decouple layers.
 - Visualization: Three.js 3D orb synced to agent state (idle / listening / processing / speaking).
-- Agent: LangGraph multi-agent graph (router → palette → arrange → effects) with streaming state; deployed on LangGraph Platform.
+- LangGraph agent: Multi-agent graph (router → palette → arrange → effects) deployed on LangGraph Platform. Architected graph structure, subagent state flow, and established interrupt protocol enabling graceful mid-generation interrupts.
 - DAW integration: TCP socket + Python Remote Script to Ableton Live; DensityMark DSL for musically valid arrangements.
 - Search: Google Vertex AI Search for semantic sample curation.
 
 ## Leadership
-Owned voice assistant architecture and implementation; designed LangGraph agent graph structure, subagent state flow, and interrupt system; drove full-stack integration from voice input to DAW automation.
+Owned voice assistant architecture and implementation; architected **LangGraph multi-agent backend** including graph structure, subagent state flow, and **established interrupt tooling** protocol; drove full-stack integration from voice input through LangGraph agents to DAW automation.
