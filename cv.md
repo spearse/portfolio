@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Stephen Pearse — CV (November 2025)
+title: Stephen Pearse — CV (March 2026)
 permalink: /cv/
 ---
 
-# Stephen Pearse — CV (November 2025)
+# Stephen Pearse — CV (March 2026)
 
 ## Profile
 Audio/AI engineer and former academic with 13+ years building tools for music creators. Led cross-platform DAWs, AI arrangement systems, semantic audio search, and payments platforms. Comfortable owning architecture, delivery, and team patterns from research prototypes through production releases.
