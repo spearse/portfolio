@@ -450,24 +450,98 @@ body.cv .mobile-nav-overlay{display:none}
 
 /* Print styles */
 @media print{
-  @page{margin:2cm 2.5cm}
-  html,body{background:white !important; color:black !important}
+  /* ── Page setup ── */
+  @page{size:A4; margin:1.8cm 2.2cm}
+
+  /* ── Global resets ── */
+  html,body{background:white !important; color:#111 !important}
   .mast,.mobile-nav-overlay,.print-btn{display:none !important}
   .wrapper{max-width:none !important; padding:0 !important}
-  .page-content{max-width:none}
-  .page-content h2,.cv-page h2{
-    font-size:1rem;
-    margin-top:1rem;
-    padding-top:0.6rem;
-    border-top:1px solid #999;
-  }
-  .page-content li,.cv-page li{margin-bottom:0.25rem}
-  a{color:black !important; text-decoration:none !important; border:none !important}
+  .page-content{max-width:none; padding:0}
+  a{color:#111 !important; text-decoration:none !important; border:none !important}
   h1,h2,h3,h4,h5,h6{page-break-after:avoid}
   li,p{page-break-inside:avoid}
-  .highlight-box,.metrics-box,.two-col,.col-box{
-    box-shadow:none;
-    border-color:#ccc;
+  .highlight-box,.metrics-box,.two-col,.col-box{box-shadow:none; border-color:#ccc}
+
+  /* ── CV-specific: traditional print typography ── */
+  body.cv,
+  body.cv .cv-page{
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #111;
+  }
+
+  /* Name */
+  body.cv .cv-page h1{
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18pt;
+    font-weight: 700;
+    letter-spacing: 0.3pt;
+    color: #111;
+    margin-bottom: 4pt;
+    border: none;
+    padding: 0;
+  }
+
+  /* Contact line under name */
+  body.cv .cv-contact{
+    font-size: 9pt;
+    color: #444;
+    margin-bottom: 10pt;
+    line-height: 1.5;
+  }
+  body.cv .cv-contact a{color:#444 !important}
+
+  /* Section headings — ALL CAPS with bottom rule, traditional style */
+  body.cv .cv-page h2{
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 1.8pt;
+    text-transform: uppercase;
+    color: #111;
+    margin-top: 13pt;
+    margin-bottom: 5pt;
+    padding-top: 0;
+    padding-bottom: 3pt;
+    border-top: none;
+    border-bottom: 0.75pt solid #111;
+  }
+
+  /* Sub-headings */
+  body.cv .cv-page h3{
+    font-size: 10.5pt;
+    font-weight: 700;
+    margin-top: 6pt;
+    margin-bottom: 2pt;
+  }
+
+  /* Body paragraphs */
+  body.cv .cv-page p{
+    font-size: 10.5pt;
+    line-height: 1.45;
+    margin-bottom: 5pt;
+    color: #111;
+  }
+
+  /* Lists */
+  body.cv .cv-page ul,
+  body.cv .cv-page ol{
+    padding-left: 12pt;
+    margin-bottom: 4pt;
+  }
+  body.cv .cv-page li{
+    font-size: 10.5pt;
+    line-height: 1.4;
+    margin-bottom: 2.5pt;
+    color: #111;
+  }
+
+  /* Bold text in experience bullets */
+  body.cv .cv-page strong{
+    font-weight: 700;
+    color: #111;
   }
 }
 
